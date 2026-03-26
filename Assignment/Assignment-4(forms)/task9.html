@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <fieldset>
+            <legend>Pizza order form</legend>
+        <label for="Firstname"> First name:</label>
+        <input type="text" id="Firstname" name="Firstname">
+        <br>
+        <label>
+            Last name:
+            <input type="text" name="lastname">
+        </label>
+        <br>
+         <label>
+            Email address:
+            <input type="email" name="email">
+        </label>
+        <br>
+         <label>
+            Contact Number:
+            <input type="number" name="contactnumber">
+        </label>
+        <br>
+         <label>
+            Preferred Delevery Date::
+            <input type="date" name="preferred_delivery_date">
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="size" value="Small">Small
+        </label>
+         <label>
+            <input type="radio" name="size" value="<Medium>">Medium
+        </label>
+         <label>
+            <input type="radio" name="size" value="Medium">Large
+        </label>
+        <br><br>
+
+        <label >
+            Flavor:
+            <br>
+            <input type="checkbox" name="flavor" value="Hawaiian(php 150.00)"> Hawaiian (php 150.00)
+            <select name="Hawaiian(php 150.00)" >
+                <option value="1">1</option>
+            </select>
+            <br>
+            <input type="checkbox" name="flavor" value="Pepperoni(php 140.00)">Pepperoni(php 140.00)
+            <select name="Pepperoni(php 140.00)" >
+                <option value="1">1</option>
+            </select>
+        </label>
+        <br><br>
+
+        <label>
+            Credit card Number:
+            <input type="text" name="CreditcardNumber">
+        </label>
+        <br><br>
+        <label>
+            PIN:
+            <input type="tel" name="Pin">
+        </label>
+        <br><br>
+        <label>
+          Additional Note:
+          <textarea name="Additionalnote" rows="5"></textarea>
+        </label>
+        <br>
+        <input type="submit" value="submit order">
+                </fieldset>
+
+    </form>
+    
+</body>
+</html>
