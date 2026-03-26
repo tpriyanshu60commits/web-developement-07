@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form >
+        <h3>Registration Form : Dance Club</h3>
+        <table border="1">
+            <tr>
+                <th>Name:</th>
+                <td>
+                    <label >
+                        <input type="text" name="name">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <th>IC No.</th>
+                <td>
+                    <label >
+                        <input type="text">-
+                        <input type="text">-
+                        <input type="text">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <th>Address:</th>
+                <td>
+                    <textarea name="address" rows="5" cols="70"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>Gender:</th>
+                <td>
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="female">Female
+                </td>
+            </tr>
+
+            <tr>
+                <th>Dance type:</th>
+                <td>
+                    <label>
+                        <input type="checkbox" name="dancetype" value="zapin">zapin
+                    </label>
+                     <label>    
+                        <input type="checkbox" name="dancetype" value="Joget">Joget
+                    </label>
+                     <label>
+                        <input type="checkbox" name="dancetype" value="Inang">Inang
+                    </label>
+                     <label>
+                        <input type="checkbox" name="dancetype" value="Lion Dance">Lion Dance
+                    </label>
+                </td>
+
+
+            </tr>
+            <tr>
+                <th>Competition:</th>
+                <td>
+                <label><input type="radio" name="competition" value="state"> State level</label>
+                <label><input type="radio" name="competition" value="national"> National level</label>
+                <label><input type="radio" name="competition" value="international"> International level</label>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Nationality:</th>
+                <td>
+                    <select name="Natioanality" >
+                        <option value="">please select</option>
+                        <option value="indian">indian</option>
+                        <option value="American">American</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>
+                    <input type="password" name="password">
+                </td>
+            </tr>
+
+
+        </table>
+        <input type="button" value="Register me">
+        <input type="reset" value="Cancel">
+    </form>
+</body>
+</html>
