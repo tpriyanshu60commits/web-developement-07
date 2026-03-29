@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Kanchenjunga:wght@400;500;600;700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+DK+Uloopet+Guides&family=Single+Day&family=Tagesschrift&display=swap');
+
+/* #outerdiv
+{
+    border: 1px solid black;
+    height: 200px;
+    width: 600px;
+   background-color: blue;
+}
+
+.innerDiv
+{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+   background-color: red;
+   margin: 45px;
+
+} */
+
+
+ /* #outerdiv{
+    border: 1px solid black;
+    height: 200px;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    justify-content: space-evenly;
+    align-items: center ;
+}
+
+.innerDiv
+{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}  */
+
+
+
+ #outerdiv{
+    border: 1px solid black;
+    height: 600px;
+    width: 800px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    align-items: center;
+    /* gap: 10px;
+    row-gap: 10px; */
+    column-gap: 10px;
+ 
+}
+
+.innerDiv
+{
+    border: 1px solid red;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
+#border
+{
+    color: blueviolet;
+    background-color: black;
+    border: 5px ridge blue;
+    font-family: "Single Day", cursive;
+    font-size: 20px;
+    font-style: italic;
+    font-weight:100;
+    text-transform:lowercase;
+    letter-spacing: 20px;
+    line-height: 10.5 ;
+}
+
+
+p{
+    height: 100px;
+    width: 250px;
+    background-color: lightgray;
+    text-shadow:  5px 5px 20px blue ;
+}
+
