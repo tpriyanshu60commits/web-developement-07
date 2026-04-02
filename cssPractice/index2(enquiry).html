@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enquiry Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <header>
+      <div class="left">
+        <img src="logo-2 (1).png" alt="ricr image" width="150px" />
+      </div>
+
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Courses</a>
+        <a href="#">IDE</a>
+        <a href="#">Contact Us</a>
+      </nav>
+
+      <div class="right">
+        <a href="tel:+918889991736">+91 8889991736</a>
+        <button>Student Login</button>
+      </div>
+    </header>
+
+    <!-- form creation -->
+
+    <section class="formSection">
+      <form class="formContainer">
+         <h2>Enquiry Form</h2>
+            <p>Have questions or need assistance? Fill out the form below.</p>
+        <div class="row">
+          <div class="inputBox">
+            <label>Person Name</label>
+            <input id="name"  type="text" placeholder="Persons Name" />
+          </div>
+          <div class="inputBox">
+            <label>Contact Number</label>
+            <input id="contact" type="text" placeholder="Contact Number" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="inputBox">
+            <label>Email</label>
+            <input id="email" type="text" placeholder="Email" />
+          </div>
+          <div class="inputBox">
+            <label>Qualificaton</label>
+            <input id="Qualification" type="text" placeholder="Qualification" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="inputBoxFull">
+            <label>College/School Name</label>
+            <input id="college" type="text" placeholder="College/School Name" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="inputBox">
+            <label for="year">Year</label>
+            <select name="Year" id="year">
+              Year
+              <option value="First Year">First Year</option>
+              <option value="Second Year">Second Year</option>
+              <option value="Third Year">Third Year</option>
+              <option value="Fourth Year">Fourth Year</option>
+              <option value="Passout">Passout</option>
+            </select>
+          </div>
+          <div class="inputBox">
+            <label>Branch*</label>
+            <input type="text" placeholder="Branch" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="inputBox">
+            <div class="checkboxGroup" id="checkbox"></div>
+             <label>Interested in Which Course*</label>
+            <br>
+            <label><input type="checkbox" class="option" /> Full Stack Web Development</label>
+            <label
+              ><input type="checkbox"  class="option"/>Data Science with Python - Placement
+              Oriented</label
+            >
+            <label
+              ><input type="checkbox" class="option" />Data Analytics with Python - Placement
+              Oriented</label
+            >
+            <label><input type="checkbox"  class="option" />Business Analyst</label>
+            <label><input type="checkbox"  class="option"/>Java Programming</label>
+            <label><input type="checkbox"  class="option" />Python Programming</label>
+            <label><input type="checkbox"  class="option" />C/C++ Programming</label>
+            <label><input type="checkbox"  class="option" />Other</label>
+          </div>
+
+          <div class="inputBoxRight">
+          <div class="inputBox">
+            <label>
+              Source of Information <br />
+              (Only choose 'Received call from institute' if you actually got a
+              call from us)*
+            </label>
+            <select>
+                <option value="">Source of Information</option>
+                <option value="Friends/relative">Friends/relative</option>
+                <option value="Socialmedia">Socialmedia</option>
+                <option value="WorkShop">WorkShop</option>
+                <option value="Other">Other</option>
+            </select>
+          </div>
+          
+          <div class="inputBox">
+            <label >Name of Executive</label>
+            <select>
+                <option >Any</option>
+            </select>
+          </div>
+          </div>
+
+
+          
+
+
+
+
+
+
+        </div>
+        <div class="row">
+            <button>Submit</button>
+          </div>
+      </form>
+    </section>
+  </body>
+</html>

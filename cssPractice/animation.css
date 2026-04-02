@@ -1,0 +1,28 @@
+.id1
+{
+    width: 50px;
+    height: 20px;
+    border: 1px solid black;
+    overflow: hidden;
+    transition: width 5s ease-in-out 1s;
+
+}
+
+.id1:hover
+{
+    width: 400px;
+    transition: width 5s ease-in-out 1s;
+}
+.div2
+{
+    
+    width: 450px;
+    height: 200px;
+    border: 1px solid black ;
+    transition: width 5s ;
+
+}
+.div2:hover
+{
+   transform:rotateZ(3600deg);
+}
