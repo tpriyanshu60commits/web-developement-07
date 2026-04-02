@@ -1,0 +1,48 @@
+:root
+{
+    --main-color:red;
+    --sub-color:brown;
+    --text-color:green;
+}
+
+
+button
+{
+    padding: 20px;
+    border-radius: 5px;
+}
+ #login
+{
+    background-color:var(--main-color) ;
+}
+ #register
+{
+    background-color:var( --sub-color);
+}
+h1{
+    color:var( --sub-color) ;
+}
+h5{
+    color:var( --sub-color) ;
+}
+
+p{
+    --somevariable:green;
+     color: var(--somevariable) ;/*local variable */
+}
+
+th{
+color: var(--text-color) ;
+}
+td
+{
+    color: greenyellow;
+}
+table 
+{
+    border-collapse: collapse;
+}
+th,td
+{
+    border: 1px solid #000;
+}
