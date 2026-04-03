@@ -161,6 +161,61 @@ nav
     margin: auto;
 }
 
+.footerContainer
+{
+    /* border: 3px solid yellow; */
+    background-color: #125785;
+    padding: 20px 40px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerbox
+{
+    /* border: 3px solid yellow; */
+    
+    flex: 1;
+    margin: 10px;
+
+}
+
+
+.footerContainer .footerbox
+{
+
+    p
+    {
+        color: whitesmoke;
+    }
+    h3
+    {
+        font-size: xx-large;
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    a
+    {
+        /* border: 3px solid yellow; */
+        display:flex;
+        color: whitesmoke;
+        text-decoration: none;
+        font-size: large;
+        margin-bottom: 10px;
+        gap: 10px;
+    }
+
+    .align
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+}
+
 
 
 
