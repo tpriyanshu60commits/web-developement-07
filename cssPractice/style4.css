@@ -1,0 +1,163 @@
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container
+{
+    /* border: 1px solid #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+
+}
+
+  .image img
+        {
+            width: 200px;
+            border: 1px solid #000;
+            margin-bottom: 20px;
+            border-radius: 50%;
+        }
+
+.left
+{
+    /* border: 1px solid #000; */
+    background-color:  #125785;
+    width: 300px;
+    padding: 20px 20px;
+    height: 1395px;
+    width: 25%;
+
+
+    .row
+    {
+        /* border: 1px solid #000; */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+
+      
+
+
+        a
+        {
+            /* border: 1px solid #000; */
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: black;
+            font-size: large;
+            color: rgba(255, 255, 255, 0.822);
+        }
+
+        p
+        {
+            /* border: 1px solid #000; */
+            margin-bottom: -3px;
+            color: rgba(255, 255, 255, 0.822);
+        }
+        h3
+        {
+            /* border: 1px solid #000; */
+            margin-bottom: 15px;
+            color: whitesmoke;
+        }
+        h4
+        {
+            /* border: 1px solid #000; */
+            margin-bottom: 0px;
+            color: yellow;
+        }
+    }
+}
+
+
+
+.left h2
+{
+    color: whitesmoke ;
+}
+.left h3
+{
+    color: yellow;
+}
+
+
+.right
+{
+    width: 75%;
+    background-color: rgb(155, 149, 149);
+    padding: 15px;
+    height: 1410px;
+
+     h2
+    {
+        color:#125785 ;
+        margin-bottom: 0px;
+    }
+    .row
+    {
+        /* border: 1px solid #000; */
+        display: flex;
+        gap: 150px;
+
+    }
+}
+
+.right .experience .row .leftSideJob
+{
+    /* border: 1px solid #000; */
+    width: 300px;
+    padding-left: 10px;
+
+    h3 
+    {
+    margin-bottom: 2px;   
+    }
+    p
+    {
+    margin-top: 0; 
+    }
+}
+
+.right .EDUCATION .row .leftSideEdu
+{
+    /* border: 1px solid #000; */
+    width: 300px;
+    padding-left: 10px;
+
+    h3 
+    {
+    margin-bottom: 2px;   
+    }
+    p
+    {
+    margin-top: 0; 
+    }
+}
+
+.right .awards .row .leftSide
+{
+    /* border: 1px solid #000; */
+    width: 300px;
+    padding-left: 10px;
+
+    h3 
+    {
+    margin-bottom: 2px;   
+    }
+    p
+    {
+    margin-top: 0; 
+    }
+}
+
+
+
+

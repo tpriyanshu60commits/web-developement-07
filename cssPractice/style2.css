@@ -216,6 +216,124 @@ nav
 
 }
 
+@media screen  and (max-width: 1024px)
+{ 
+   header
+   {
+    /* border: 5px solid brown; */
+    flex-wrap: wrap ;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+   }
+   nav 
+   {
+    /* border: 1px solid #000; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+
+   }
+
+   nav a
+   {
+    /* border: 1px solid #000; */
+    margin: 0px 10px;
+    font-size: medium;
+}
+.right
+{
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.formContainer
+{
+    border: 1px solid #000;
+    width: 90%;
+}
+
+.row
+{
+    flex-wrap: wrap;
+}
+
+
+.inputBox , .inputBoxFull , .inputBoxRight
+{
+    width: 100%;
+}
+
+  #name,
+  #contact,
+  #email,
+  #Qualification,
+  #year {
+    width: 100% !important;
+  }
+
+  #college {
+    width: 100% !important;
+  }
+
+    .footerContainer {
+    flex-wrap: wrap;
+  }
+
+  .footerbox {
+    flex: 45%;
+    padding: auto;
+  }
+
+ 
+}
+
+
+
+
+
+@media screen and (max-width:768px)
+{
+   header
+   {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+   } 
+ 
+ .footerContainer
+   {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   }
+   .footerbox
+   {
+    width: 70%  ;
+   }
+  
+
+
+
+
+}
+
+
+@media screen and (max-width:480px) {
+    
+header
+{
+    padding: 10px;
+}
+
+ 
+}
+
+
 
 
 
