@@ -1,0 +1,147 @@
+.header
+{
+    /* border: 1px solid #000; */
+    display: grid;
+    grid-template-columns: auto auto ;
+    padding: 20px 40px;
+
+
+    .left
+    {
+        /* border: 1px solid #000; */
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        column-gap: 10px;
+    }
+
+    img
+    {
+        width:200px ;
+    }
+    .left nav a 
+    {
+        /* border: 1px solid #000; */
+        text-decoration: none;
+        color: black;
+        font-size: x-large;
+        margin: 0px 15px;
+        font-weight:normal;
+    }
+
+    .right
+    {
+        display: flex;
+        /* border: 1px solid #000; */
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 10px;
+        align-items: center;
+        gap: 1vw;
+        padding: 0 20px;
+    }
+
+    .right a 
+    {
+        text-decoration: none;
+        color: black;
+        font-size: x-large;
+    }
+
+    .right button
+    {
+        padding: 10px;
+        font-size: large;
+        background-color: #125785;
+        color: whitesmoke;
+        border-radius: 5px;
+        box-shadow: 5px 5px #5AB2FF;
+
+    }
+}
+
+
+.formSection
+{
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+
+.formContainer
+{
+
+    border: 5px solid brown;
+    width: 50%;
+    padding: 20px;
+
+    h2
+    {
+        /* border: 1px solid #000; */
+
+        text-align: center;
+        font-size: xx-large;
+        padding: 10px;
+        margin-top:15px;
+        margin-bottom: 0;
+    }
+    p
+    {
+        /* border: 1px solid #000; */
+        text-align: center;
+
+    }
+
+    .row
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1vw;
+
+        div
+        {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+
+            input,select
+            {
+                padding: 2%;
+                border-radius: 5px;
+            }
+        }
+
+        .left
+        {
+            display: flex;
+            flex-direction: column;
+            width: 150%;
+        }
+       
+
+
+
+
+    } 
+     .row1
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1vw;
+
+        div
+        {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+
+            input
+            {
+                padding: 1%;
+                border-radius: 5px;
+            }
+        }
+
+
+    } 
+}
+}
