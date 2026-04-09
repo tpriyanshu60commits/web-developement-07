@@ -1,0 +1,18 @@
+.box1 {
+  background: red;
+  height: 1000px;
+}
+
+.box2 {
+  background: yellow;
+  height: 100px;
+
+  position: relative;
+  top: -500px;
+}
+.box3 {
+  background: pink;
+  height: 100px;
+
+ 
+}

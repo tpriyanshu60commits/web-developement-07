@@ -1,0 +1,10 @@
+.child
+{
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+   
+    background: yellow;
+    padding: 40px;
+    text-align: center;
+}
