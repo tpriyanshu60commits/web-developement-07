@@ -17,12 +17,14 @@
   margin: 0px;
   padding: 0px;
 }
-
 header
 {
   background-color: var(--color-primary);
   height: 64px;
-  position: sticky;
+  position:sticky;
+  top: 0;
+  z-index: 99;
+ 
 }
 .navbarLogin
 {
@@ -60,4 +62,29 @@ header
   max-width: 1000px;
   width: 100%;
 
+}
+.restaurentHeading
+{
+  color: var(--color-primary-content);
+}
+.restaurentSection
+{
+  
+  background-color:var(--color-base-300);
+}
+.restaurentButtons
+{
+  background-color: var(--color-base-300);
+  border:none;
+  
+}
+.restaurentExploreBtn
+{
+ background-color: var(--color-primary);
+ color: var(--color-primary-content);
+}
+.restaurentCardImages
+{
+  height: 220px;
+  object-fit: cover;
 }
