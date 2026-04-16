@@ -212,6 +212,10 @@ header
 
 /* ourStory Section */
 
+.ourStory
+{
+  background-color: var(--color-base-100);
+}
 .ourStoryHeading
 {
   color: var(--color-primary);
