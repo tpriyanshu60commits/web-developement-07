@@ -90,6 +90,11 @@ header
 .restaurentCard
 {
   position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.restaurentCard:hover {
+  transform: scale(1.05);   
+  box-shadow: 0 10px 25px black;
 }
 .ratingBadge
 {
@@ -115,8 +120,14 @@ header
   background-color: var(--color-primary-content);
   width: 100%;
   height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.cravingsNumberSectionCard:hover
+{
+  transform: scale(1.02);   
+  box-shadow: 0 3px 10px lightslategray;
 
+}
 .cravingsNumberSectionCard h5
 {
   white-space: nowrap;
@@ -130,6 +141,12 @@ header
 .customersSayCard
 {
   background-color:var(--color-base-100);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.customersSayCard:hover
+{
+  transform: scale(1.02);   
+  box-shadow: 0 3px 10px lightslategray;
 }
 .customersSayStars
 {
@@ -162,4 +179,41 @@ header
   color: white;
   width: 85%;
   margin: 20px auto;
+}
+
+
+
+
+.aboutCravings {
+  height: 65vh;
+  background-image: linear-gradient(rgba(0,0,0,0.5)),url(../images/aboutPage.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.aboutCravingsHeading
+{
+  color: var(--color-primary);
+}
+
+.statsBar
+{
+  background-color:var(--color-neutral);
+}
+.statsBarHeading
+{
+  color: var(--color-primary);
+}
+.statsBarStar
+{
+  color: yellow;
+  font-size: 30px;
+}
+
+/* ourStory Section */
+
+.ourStoryHeading
+{
+  color: var(--color-primary);
+  font-size: 20px;
 }
