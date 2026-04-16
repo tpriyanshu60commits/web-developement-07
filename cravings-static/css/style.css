@@ -237,3 +237,44 @@ header
 {
   background-color:var(--color-primary-content);
 }
+
+/* Meet the Team section */
+.teamSection
+{
+  background-color: var(--color-base-100);
+}
+.teamSectionHeading
+{
+  color: var(--color-primary);
+}
+.teamSectionButton
+{
+  color: var(--color-primary-content);
+  background-color: var(--color-primary);
+}
+
+/* Ready to satisfy your cravings */
+.readyToSatisfy
+{
+  background-color: var(--color-primary);
+}
+.readyToSatisfy h4
+{
+  color: var(--color-primary-content);
+}
+.getStartedButton
+{
+  color: var(--color-primary);
+}
+.contactUsButton
+{
+  color: var(--color-primary-content);
+  background-color:var(--color-primary);
+}
+
+.searchBox
+{
+  position: sticky;
+  top: 0px;
+  z-index: 98;
+}
