@@ -121,3 +121,45 @@ header
 {
   white-space: nowrap;
 }
+
+/* What Our Customers Say Section */
+.customersSay
+{
+  background-color:var(--color-primary-content);
+}
+.customersSayCard
+{
+  background-color:var(--color-base-100);
+}
+.customersSayStars
+{
+  color: #f4c430;
+  font-size: 18px;
+}
+.customersSayCardButton
+{
+  background-color: var(--color-primary);
+  color: var(--color-base-100);
+}
+
+/* Become a Restaurant Partner Section */
+.restaurantPartner
+{
+  background-color:var(--color-primary);
+}
+.restaurantPartnerButton
+{
+  color: var(--color-primary);
+}
+
+/* footer Section */
+.cravingsFooter
+{
+  background-color: var(--color-neutral);
+}
+.cravingsFooterLine
+{
+  color: white;
+  width: 85%;
+  margin: 20px auto;
+}
