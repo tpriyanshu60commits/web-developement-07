@@ -186,7 +186,7 @@ header
 
 .aboutCravings {
   height: 65vh;
-  background-image: linear-gradient(rgba(0,0,0,0.5)),url(../images/aboutPage.png);
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(../images/aboutPage.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -220,4 +220,20 @@ header
 {
   color: var(--color-primary);
   font-size: 20px;
+}
+
+
+/* ourCoreValues */
+.ourCoreValues
+{
+  background-color: var(--color-base-200);
+}
+
+.ourCoreValuesHeading
+{
+  color: var(--color-primary);
+}
+.cards
+{
+  background-color:var(--color-primary-content);
 }
