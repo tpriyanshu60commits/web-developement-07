@@ -42,26 +42,28 @@
 
     <!-- form section -->
 
-    <section class="helpSection">
-        <div class="helpContainer">
+    <section class="helpSection d-flex justify-content-center p-5">
+        <div class="helpContainer w-75">
             <div class="d-flex justify-content-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-question-circle-fill text-danger" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-question-circle-fill text-danger mt-4" viewBox="0 0 16 16">
                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247m2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/></svg>
-                <h4>Help Center</h4>
+                <h3 class="helpSectionHeading fw-bold mt-4">Help Center</h3>
             </div>  
-            <p class="text-center">Browse FAQs or submit a support ticket below.</p> 
+            <p class="text-center fw-medium text-light mb-5">Browse FAQs or submit a support ticket below.</p> 
 
-            <div class="row">
-                <div class="col-lg-8 ">
-                    <div class="row">
-                        <div class="col-lg-6 border border-5 p-5">
+            <div class="row d-flex justify-content-center align-items-center mb-5">
+                <div class="col-lg-10 col-md-8 col-sm-12 ">
+
+                    <!-- first column -->
+                    <div class="row ">
+                        <div class="col-lg-5 col-md-12 col-sm-12 py-4 px-2">
                             <p class="fw-medium fs-5 mb-3 text-light">Frequently Asked Questions</p>
 
                             <!-- option -1 -->
-                            <div class=" d-flex w-100 justify-content-between align-items-center mb-2 px-2 border border-light p-1 rounded bg-transparent">
+                            <div class=" d-flex w-100 justify-content-between align-items-center mb-2 px-2 border border-light p-1 rounded bg-transparent ">
                                 <div class="d-flex gap-1 align-items-center">
                                     <i class="bi bi-bag-fill text-light"></i> 
-                                    <p class="m-1 text-light bg-transparent fw-medium">How do I track my order?</p>   
+                                    <p class="helpSectionParagraph m-1 text-light bg-transparent fw-medium">How do I track my order?</p>   
                                 </div>
                                 <i class="bi bi-plus-lg me-1 text-light"></i>
                             </div>
@@ -93,11 +95,94 @@
                             </div>
 
                         </div>
+
+                        <!-- center line -->
+                        <div class="col-lg-1 d-flex justify-content-center">
+                            <div class="vertical-line"></div>
+                         </div>
+
+                    <!-- second column -->
+
+                    <div class="col-lg-5 col-md-12 col-sm-12 py-4 px-2">
+                        <p class="fw-medium fs-5 mb-3 text-light">Submit a Support Ticket</p>
+                        <input type="text" placeholder="Enter your full name" class="helpSectionInput w-100 p-2 rounded-2 mb-2 shadow-none border-light border-1">
+                        <input type="email" placeholder="Enter your email" class="helpSectionInput w-100 p-2 rounded-2 mb-2 shadow-none border-light border-1">
+                        <select name="" id="" class="helpSectionInput w-100 p-2 rounded-2 mb-2 shadow-none border-light border-1">
+                            <option value="">Select issue type</option>
+                            <option value="Account&profile">Account & profile</option>
+                            <option value="">Orders Issues</option>
+                            <option value="">Payment Billing</option>
+                        </select>
+                        <input type="text" placeholder="e.g. ORD-00123" class="helpSectionInput w-100 p-2 rounded-2 mb-2 shadow-none border-light border-1">
+                        <textarea name="" id=""  placeholder="Enter your feedback" rows="3" class="helpSectionInput w-100 p-2 rounded-2 mb-2 shadow-none border-light border-1"></textarea>
+                        <button class="registerFormButton w-100 mt-4 p-2 rounded fw-medium border-0">Submit Ticket</button>
+
+                    </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+
+    <!-- footer Section -->
+
+    <footer class="cravingsFooter p-4">
+      <p class="text-center text-light mb-5 mt-3">--- Your favorite food delivery platform connecting customers with restaurants and riders. ---</p>
+      <div class="row d-flex justify-content-center align-items-start mb-3 gap-4">
+        <div class="col-md-2">
+          <img src="./images/footer-image.png" alt="" width="150px">
+        </div>
+        <div class="col-md-2 h-25 ">
+          <h5 class="text-light mb-3">Quick Links</h5>
+          <nav class="d-flex flex-column">
+            <a href="#" class="text-light text-decoration-none mb-1">Home</a>
+            <a href="#" class="text-light text-decoration-none mb-1">About</a>
+            <a href="#" class="text-light text-decoration-none mb-1">Order Now</a>
+          </nav>
+        </div>
+
+        <div class="col-md-2">
+          <h5 class="text-light mb-3">For Restaurants</h5>
+          <nav class="d-flex flex-column">
+            <a href="#" class="text-light text-decoration-none mb-1">Partner With Us</a>
+            <a href="#" class="text-light text-decoration-none mb-1">Restaurant Dashboard</a>
+          </nav>
+        </div>
+
+        <div class="col-md-2">
+          <h5 class="text-light mb-3">For Riders</h5>
+          <nav class="d-flex flex-column">
+            <a href="#" class="text-light text-decoration-none mb-1">Become a Rider</a>
+            <a href="#" class="text-light text-decoration-none mb-1">Rider Dashboard</a>
+          </nav>
+        </div>
+
+        <div class="col-md-2">
+          <h5 class="text-light mb-3">Feedback & Support</h5>
+          <nav class="d-flex flex-column">
+            <a href="#" class="text-light text-decoration-none mb-1">Submit Feedback</a>
+            <a href="#" class="text-light text-decoration-none mb-1">Help Center</a>
+            <a href="#" class="text-light text-decoration-none mb-1">Contact Us</a>
+          </nav>
+        </div>
+      </div>
+        <hr class="cravingsFooterLine mt-3  opacity-100">
+
+      <div class="row d-flex flex-row d-flex justify-content-around">
+        <div class="col-md-4 text-light">
+          <p>© 2026 Cravings. All rights reserved.</p>
+        </div>
+        <div class="col-md-4 d-flex gap-4 align-items-center justify-content-end">
+          <a href="#" class="text-light text-decoration-none mb-1">Privacy Policy</a>
+          <a href="#" class="text-light text-decoration-none mb-1">Terms of Service</a>
+          <a href="#" class="text-light text-decoration-none mb-1" >Site Map</a>
+        </div>
+      </div>
+      
+
+    </footer>
 
 
     <!-- bootstrap link -->

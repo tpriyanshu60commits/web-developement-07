@@ -346,5 +346,38 @@ header
 }
 .helpContainer
 {
-  background: linear-gradient(rgba(0,0,0,0.4 ));
+  background: linear-gradient(rgba(0,0,0,0.4) ,rgba(0,0,0,0.9));
 }
+.helpSectionHeading
+{
+  color: var(--color-primary);
+}
+.helpSectionParagraph
+{
+  font-size: 14px;
+}
+.vertical-line {
+  width: 1px;
+  background-color: whitesmoke;
+  height: 100%;
+}
+.helpSectionInput
+{
+background-color: rgba(255, 255, 255, 0.1 );  opacity: 90%;
+}
+.helpSectionInput
+{
+  color:rgba(255, 255, 255, 0.801); ;
+}
+.helpSectionInput option {
+  background-color: #fff; 
+  color: #000;
+}
+
+.helpSectionInput::placeholder
+{
+  color: rgba(255, 255, 255, 0.801);
+}
+
+
+
