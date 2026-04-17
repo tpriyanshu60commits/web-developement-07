@@ -398,3 +398,13 @@ background-color: rgba(255, 255, 255, 0.1 );  opacity: 90%;
 
 /* feedback form */
 
+.feedbackFormSection
+{
+  background-image: url(../images/FeedbackPage.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.feedbackFormHeading
+{
+  color: var(--color-primary);
+}
