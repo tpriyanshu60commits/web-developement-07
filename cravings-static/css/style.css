@@ -182,7 +182,7 @@ header
 }
 
 
-
+/* about section */
 
 .aboutCravings {
   height: 65vh;
@@ -220,6 +220,10 @@ header
 {
   color: var(--color-primary);
   font-size: 20px;
+}
+.aboutCards
+{
+  background-color: var(--color-primary-content);
 }
 
 
@@ -379,5 +383,18 @@ background-color: rgba(255, 255, 255, 0.1 );  opacity: 90%;
   color: rgba(255, 255, 255, 0.801);
 }
 
+/* contact form */
+.contactFormHeading
+{
+  color: var(--color-primary);
+}
+.contactFormSection
+{
+  background-image: url(../images/contactPage.jpg);
+  background-size: cover;
+  background-position: center;
+}
 
+
+/* feedback form */
 
