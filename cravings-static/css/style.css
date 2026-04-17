@@ -278,3 +278,73 @@ header
   top: 0px;
   z-index: 98;
 }
+
+
+/* login form */
+
+.loginFormSection
+{
+  background-image:url(../images/login\ page.webp) ;
+  background-size: cover;
+  background-position: center;
+}
+
+.loginFormHeading
+{
+  color: var(--color-primary);
+  
+}
+.loginFormButton
+{
+  background-color: var(--color-primary);
+  color: var(--color-primary-content);
+}
+.forgetPasswordLoginForm
+{
+  color: var(--color-primary);
+}
+.createAnAccountLoginButton
+{
+  color: var(--color-primary);
+}
+.loginForminput::placeholder
+{
+  font-size: 14px;
+}
+/* register form */
+.registerFormSection
+{
+  background-image: url(../images/login\ page.webp);
+  background-size: cover;
+  background-position: center;
+}
+.registerFormHeading
+{
+  color: var(--color-primary);
+}
+.registerFormButton
+{
+  background-color: var(--color-primary);
+  color: var(--color-primary-content);
+}
+.registerFormAtag
+{
+  color: var(--color-primary);
+}
+.registerForminput::placeholder
+{
+  font-size: 14px;
+}
+
+
+/* helpcenter */
+.helpSection
+{
+  background-image: url(../images/HelpPage.jpg);
+  background-size: cover;
+
+}
+.helpContainer
+{
+  background: linear-gradient(rgba(0,0,0,0.4 ));
+}
