@@ -469,3 +469,31 @@ header {
 {
   background-color: var(--color-base-100);
 }
+
+/* !-- Questions about your terms? */
+
+.termsOfServiceQuestionSection
+{
+  background-color: var(--color-primary);
+}
+#termsOfServiceQuestionSectionParagraph
+{
+  font-size: 14px;
+}
+
+/* <!-- SiteMap section --> */
+
+.siteMapParagraph
+{
+  font-size: 16px;
+}
+.siteMapHeading
+{
+  color: var(--color-primary);
+}
+.siteMapSection
+{
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/commonBG.avif) ;
+  background-size: cover;
+  background-position: center;
+}
