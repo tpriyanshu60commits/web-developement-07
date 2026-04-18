@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link
@@ -17,10 +17,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     />
-</head>
-<body>
-
-     <!-- header -->
+  </head>
+  <body>
+    <!-- header -->
     <header class="d-flex justify-content-between align-items-center p-4">
       <div>
         <img
@@ -31,37 +30,225 @@
         />
       </div>
       <div class="d-flex justify-content-between align-items-center gap-2 me-4">
-        <button class="navbarLogin border border-0 rounded p-2">Login</button>
+        <a href="login.html"
+          ><button class="navbarLogin border border-0 rounded p-2">
+            Login
+          </button></a
+        >
         <button class="navbarRegister border border-0 rounded p-2">
           Register
         </button>
       </div>
     </header>
 
-
-
-     <!-- SiteMap section -->
+    <!-- SiteMap section -->
     <section class="siteMapSection p-4">
       <div class="row d-flex justify-content-center align-items-center">
         <div class="col-lg-5 col-md-6 col-sm-10">
           <div class="siteMapContainer p-4">
             <span class="d-flex justify-content-center align-items-center">
-              <i class="bi bi-file-earmark-ruled text-danger fs-1 mb-2"></i>
+              <i class="bi bi-map-fill text-danger fs-1 mb-0"></i>
             </span>
             <div class="d-flex gap-3 justify-content-center align-items-center">
               <h1 class="fw-bold text-light display-5">Site</h1>
               <h1 class="siteMapHeading fw-bold display-5">Map</h1>
             </div>
             <p class="text-center mb-1 text-light opacity-75">
-              Please read these terms carefully before using the Cravings
-              platform.
-            </p>
-            <p
-              class="siteMapParagraph text-center p-0 mt-2 opacity-50 text-light"
-            >
-              Last updated: April 9, 2026
+              A complete overview of every page on the Cravings platform.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Column Link Grid section -->
+
+    <section class="columnLinkSection p-5">
+    <div class="columnLinkContainer">
+        <div class="row p-2 d-flex justify-content-center align-items-start gap-3">
+          <!-- card-1 -->
+          <div class="col-lg-2 col-md-6 col-sm-12 columnLinkHeading fw-bold p-3 d-flex flex-column">
+            <p class="mb-1">Main</p>
+            <hr class="mt-1 text-black mb-3" />
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 mb-2"
+            >
+              <i class="bi bi-house-door-fill text-danger opacity-75"></i>
+              <a
+                href="#"
+                class="text-decoration-none text-black opacity-75 fw-light"
+                >Home</a
+              >
+            </div>
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 mb-2"
+            >
+              <i class="bi bi-info-circle-fill text-danger opacity-75"></i>
+              <a
+                href="#"
+                class="text-decoration-none text-black opacity-75 fw-light"
+                >About Cravings</a
+              >
+            </div>
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 mb-2"
+            >
+              <i class="bi bi-cup-fill text-danger opacity-75"></i>
+              <a
+                href="#"
+                class="text-decoration-none text-black opacity-75 fw-light"
+                >Order Now</a
+              >
+            </div>
+          </div>
+
+          <!-- card-2 -->
+          <div
+            class="col-lg-2 col-md-6 col-sm-12 columnLinkHeading fw-bold p-3 d-flex flex-column gap-1 "
+          >
+            <p class="m-0">Support</p>
+            <hr class="mt-1 text-black" />
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 mb-2"
+            >
+              <i class="bi bi-envelope-fill text-danger opacity-75"></i>
+              <a
+                href="#"
+                class="text-decoration-none text-black opacity-75 fw-light"
+                >Contact Us</a
+              >
+            </div>
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 mb-2"
+            >
+              <i class="bi bi-chat-dots-fill text-danger opacity-75"></i>
+              <a
+                href="#"
+                class="text-decoration-none text-black opacity-75 fw-light"
+                >Feedback</a
+              >
+            </div>
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 mb-2"
+            >
+              <i class="bi bi-question-circle-fill text-danger opacity-75"></i>
+              <a
+                href="#"
+                class="text-decoration-none text-black opacity-75 fw-light"
+                >Help Center</a
+              >
+            </div>
+          </div>
+
+          <!-- card-3 -->
+          <div
+            class="col-lg-2 col-md-6 col-sm-12 columnLinkHeading fw-bold p-3 d-flex flex-column gap-1"
+          >
+            <p class="m-0">Account</p>
+            <hr class="mt-1 text-black" />
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 mb-2"
+            >
+              <i class="bi bi-box-arrow-in-right text-danger opacity-75"></i>
+              <a
+                href="#"
+                class="text-decoration-none text-black opacity-75 fw-light"
+                >Login</a
+              >
+            </div>
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 mb-2"
+            >
+              <i class="bi bi-person-fill-add text-danger opacity-75"></i>
+              <a
+                href="#"
+                class="text-decoration-none text-black opacity-75 fw-light"
+                >Register as Customer</a
+              >
+            </div>
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 mb-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-fork-knife text-danger opacity-75"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z"
+                />
+              </svg>
+              <a
+                href="#"
+                class="text-decoration-none text-black opacity-75 fw-light"
+                >Register as Restaurent</a
+              >
+            </div>
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 mb-2"
+            >
+              <i class="bi bi-person-fill-add text-danger opacity-75"></i>
+              <a
+                href="#"
+                class="text-decoration-none text-black opacity-75 fw-light"
+                >Register as Rider</a
+              >
+            </div>
+          </div>
+
+          <!-- card-4 -->
+          <div
+            class="col-lg-2 col-md-6 col-sm-12 columnLinkHeading fw-bold p-3 d-flex flex-column gap-1"
+          >
+            <p class="m-0">Legal</p>
+            <hr class="mt-1 text-black" />
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 mb-2"
+            >
+              <i class="bi bi-shield-shaded text-danger opacity-75"></i>
+              <a
+                href="#"
+                class="text-decoration-none text-black opacity-75 fw-light"
+                >Privacy Policy</a
+              >
+            </div>
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 mb-2"
+            >
+              <i
+                class="bi bi-file-earmark-text-fill text-danger opacity-75"
+              ></i>
+              <a
+                href="#"
+                class="text-decoration-none text-black opacity-75 fw-light"
+                >Terms of Service</a
+              >
+            </div>
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 mb-2"
+            >
+              <i class="bi bi-map-fill text-danger opacity-75"></i>
+              <a
+                href="#"
+                class="text-decoration-none text-black opacity-75 fw-light"
+                >Site Map</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit our Help Center Section -->
+
+    <section class="visitOurHelpCenterSection py-4 my-0">
+      <div class="visitOurHelpCenterContainer d-flex justify-content-center align-items-center ">
+        <div class="d-flex gap-1 mt-2">
+            <p class="opacity-50 text-light">Can't find what you're looking for? </p>
+            <a href="#" class="text-decoration-none fw-medium text-light">Visit our Help Center.</a>
         </div>
       </div>
     </section>
@@ -74,8 +261,7 @@
 
 
 
-
     <!-- bootstrap link -->
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>

@@ -497,3 +497,22 @@ header {
   background-size: cover;
   background-position: center;
 }
+
+
+    /* <!-- Column Link Grid section --> */
+
+    .columnLinkHeading
+    {
+      color: var(--color-primary);
+    }
+    .columnLinkSection
+    {
+      background-color:var(--color-base-100);
+    }
+
+
+     /* Visit our Help Center Section */
+     .visitOurHelpCenterSection
+     {
+      background-color: var(--color-primary);
+     }
