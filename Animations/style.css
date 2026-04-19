@@ -1,0 +1,142 @@
+button
+{
+    color: red;
+    background-color:antiquewhite;
+    padding: 10px;
+    border-radius: 5px;
+    transition: color 1s ease 1s;
+}
+button:hover
+{
+    background-color: blue;
+    color: yellow;
+}
+
+.box
+{
+    height: 100px;
+    width: 200px;
+    background-color:antiquewhite;
+    transition: width 2s ease-in-out 1s;
+    
+}
+.box:hover
+{
+    width: 500px;
+    background-color: aquamarine;
+}
+
+.box1
+{
+    height: 100px;
+    width: 300px;
+    background-color: blueviolet;
+    transition: width 2s ease-in 5s, height 2s ease-out 5s;
+}
+.box1:hover
+{
+    height: 500px;
+    width: 700px;
+}
+
+
+/* transform */
+
+.boxTransform
+{
+    height: 100px;
+    width: 200px;
+    background-color:brown;
+    transition: transform 2s ease-in-out 2s , width 2s ease-in 1s ; 
+}
+.boxTransform:hover 
+{
+  transform: rotate(90deg);
+  width: 500px;
+}
+
+.rotate
+{
+    height: 50px;
+    width: 100px;
+    background-color:burlywood;
+    /* transform: translateX(400px) rotate(90deg) skew(50deg ,100deg ); */
+    transition: transform 0.4s ease;
+
+}
+.rotate:hover {
+  transform: skewX(15deg);
+}
+
+.practice
+{
+    margin-top: 40px;
+    height: 50px;
+    width: 100px;
+    background-color:blueviolet;
+    transition: transform 3s ease-in 1s;
+}
+.practice:hover
+{
+    transform: translate(50px , 50px) rotate(45deg) scale(2) sk;
+}
+
+
+/* keyframesbox */
+
+.keyframesbox
+{
+    height: 50px;
+    width: 100px;
+    background-color: brown;
+    animation: moveBox 3s ease-in-out 1s infinite none;
+
+}
+
+@keyframes moveBox
+{
+    0%
+    {
+        transform: translateX(0px);
+    }
+    25%
+    {
+        transform: translateX(10px);
+    }
+    50%
+    {
+        transform: translateX(40px);
+    }
+    75%
+    {
+        transform: translateX(80px);
+    }
+    100%
+    {
+        transform: translateX(100px);
+    }
+}
+
+.keyframesbox1
+{
+    height: 50px;
+    width: 100px;
+    background-color: brown;
+    animation: bounce 3s ease-in-out 1s infinite alternate;
+
+}
+
+@keyframes bounce
+{
+     0% {
+        transform: translateY(0);
+        background-color: #ff4757;
+    }
+    50% {
+        background-color: #2ed573; /* Changes color halfway */
+    }
+    100% {
+        transform: translateY(100px); /* Moves up */
+        background-color: #1e90ff;
+}
+}
