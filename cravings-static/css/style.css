@@ -40,11 +40,26 @@ header {
 .navbarLogin {
   background-color: var(--color-primary);
   color: var(--color-primary-content);
+  border: 1px solid transparent;
+  transition: border 0.1s ease;
+}
+
+.navbarLogin:hover {
+  border: 1px solid white;
 }
 
 .navbarRegister {
   background-color: var(--color-primary-content);
   color: var(--color-primary);
+  border: 1px solid transparent;
+  transition: background-color 0.1s ease, color 0.1s ease, border 0.1s ease;
+
+}
+
+.navbarRegister:hover {
+  background-color: transparent;
+  color: var(--color-primary-content);
+  border: 1px solid white;
 }
 
 .heroSection {
@@ -59,6 +74,8 @@ header {
 
 }
 
+
+/* hero section */
 .heroSignup {
   color: var(--color-primary-content);
   background-color: var(--color-primary);
@@ -100,12 +117,11 @@ header {
 
 .restaurentCard {
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .restaurentCard:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px black;
+  transform: translateY(-5px) scale(1.02);
 }
 
 .ratingBadge {
@@ -135,8 +151,8 @@ header {
 }
 
 .cravingsNumberSectionCard:hover {
-  transform: scale(1.02);
-  box-shadow: 0 3px 10px lightslategray;
+  transform: scale(1.01);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -151,12 +167,12 @@ header {
 
 .customersSayCard {
   background-color: var(--color-base-100);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.5s ease, transform 0.1s ease;
 }
 
 .customersSayCard:hover {
-  transform: scale(1.02);
-  box-shadow: 0 3px 10px lightslategray;
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .customersSayStars {
@@ -278,11 +294,24 @@ header {
   background-color: var(--color-primary);
 }
 
+
+
+
+/* orderNow Section */
+
+.orderNowSection {
+background-color:var(--color-base-200);
+}
+
 .searchBox {
   position: sticky;
   top: 0px;
   z-index: 98;
+  background-color: #f5efe7; /* light beige background */
+
 }
+
+
 
 
 /* login form */
@@ -418,32 +447,30 @@ header {
 }
 
 /* Privacy policy section */
-.privacyPolicyParagraph
-{
+.privacyPolicyParagraph {
   font-size: 12px;
 }
-.privacyPolicyHeading
-{
+
+.privacyPolicyHeading {
   color: var(--color-primary);
 }
-.privacyPolicySection
-{
-  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/commonBG.avif) ;
+
+.privacyPolicySection {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/commonBG.avif);
   background-size: cover;
   background-position: center;
 }
 
 
-.privacyPolicySecondSection
-{
+.privacyPolicySecondSection {
   background-color: var(--color-base-100);
 }
-.privacyPolicyQuestionSection
-{
+
+.privacyPolicyQuestionSection {
   background-color: var(--color-primary);
 }
-#privacyPolicyQuestionSectionParagraph
-{
+
+#privacyPolicyQuestionSectionParagraph {
   font-size: 14px;
 }
 
@@ -451,68 +478,73 @@ header {
 /* termsOfService */
 
 
-.termsOfServiceParagraph
-{
+.termsOfServiceParagraph {
   font-size: 16px;
 }
-.termsOfServiceHeading
-{
+
+.termsOfServiceHeading {
   color: var(--color-primary);
 }
-.termsOfServiceSection
-{
-  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/commonBG.avif) ;
+
+.termsOfServiceSection {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/commonBG.avif);
   background-size: cover;
   background-position: center;
 }
-.termsOfServiceSecondSection
-{
+
+.termsOfServiceSecondSection {
   background-color: var(--color-base-100);
 }
 
 /* !-- Questions about your terms? */
 
-.termsOfServiceQuestionSection
-{
+.termsOfServiceQuestionSection {
   background-color: var(--color-primary);
 }
-#termsOfServiceQuestionSectionParagraph
-{
+
+#termsOfServiceQuestionSectionParagraph {
   font-size: 14px;
 }
 
 /* <!-- SiteMap section --> */
 
-.siteMapParagraph
-{
+.siteMapParagraph {
   font-size: 16px;
 }
-.siteMapHeading
-{
+
+.siteMapHeading {
   color: var(--color-primary);
 }
-.siteMapSection
-{
-  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/commonBG.avif) ;
+
+.siteMapSection {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/commonBG.avif);
   background-size: cover;
   background-position: center;
 }
 
 
-    /* <!-- Column Link Grid section --> */
+/* <!-- Column Link Grid section --> */
+.columnLinkHeading {
+  color: var(--color-primary);
+}
 
-    .columnLinkHeading
-    {
-      color: var(--color-primary);
-    }
-    .columnLinkSection
-    {
-      background-color:var(--color-base-100);
-    }
+.columnLinkSection {
+  background-color: var(--color-base-100);
+}
 
 
-     /* Visit our Help Center Section */
-     .visitOurHelpCenterSection
-     {
-      background-color: var(--color-primary);
-     }
+/* Visit our Help Center Section */
+.visitOurHelpCenterSection {
+  background-color: var(--color-primary);
+}
+
+/* footer Section */
+.footerButtons
+{
+  color: var(--color-base-100);
+  transition: color 0.1s ease;
+}
+.footerButtons:hover
+{
+  color: var(--color-primary);
+}
