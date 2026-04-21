@@ -1,0 +1,78 @@
+body
+{
+   text-align: center;
+}
+
+.box
+{
+    width: 100%;
+    max-width: 200px;
+    background-color: blue;
+    color: aqua;
+    padding: 20px;
+
+}
+
+header
+{
+    width: 100%;
+    height: 10vh;
+    background-color: #222;
+    color: wheat;
+}
+main
+{
+    width: 80%;
+    margin: 20px auto;
+    background: #f0f0f0;
+    padding: 50px;
+}
+
+.split-screen 
+{
+     display: flex;
+     gap: 5px;
+     justify-content: center;
+}
+.split-screen section 
+{
+    width: 40vw;
+    height: 30vh;
+    outline: 1px solid white;
+    background: #007bff;
+    color: white;
+}
+
+.own
+{
+    display: flex;
+    
+    div
+    {
+        width: 50vw;
+        background-color: burlywood;
+        color: red;
+        height: 20vh;
+        padding: 5px;
+
+    }
+}
+
+@media(max-width: 600px)
+{
+    .own{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .split-screen
+    {
+        background-color:palevioletred;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        padding-left: 5%;
+    }
+}
+
