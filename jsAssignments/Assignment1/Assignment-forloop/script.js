@@ -19,12 +19,18 @@ for(let i=10 ; i>=1 ; i--)
 // 4.Print even numbers from 2 to 10. 
 for(let i=2 ; i<=10 ; i+=2)
 {
+    if(i%2==0)
+    {
     console.log(i);
+    }
 }
 // 5.Print odd numbers from 1 to 9. 
 for(let i=1 ; i<=9 ; i+=2)
 {
+     if(i%2!=0)
+    {
     console.log(i);
+    }
 }
 // 6.Print the table of 15 up to 10 steps. 
 for(let i=1 ; i<=10 ; i++)
