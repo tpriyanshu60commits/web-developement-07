@@ -8,7 +8,7 @@ function classA()
     console.log("classA" , test);
     {
        let v = 10;
-       console.log(v);
+       console.log(v); //bloak variable
     }
         // console.log(v);
 }
