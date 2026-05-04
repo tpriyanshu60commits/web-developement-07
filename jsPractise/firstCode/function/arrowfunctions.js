@@ -53,4 +53,8 @@ let diff = (a, b) => a - b;
 console.log(diff(10, 4));
 
 
+let hifi = (num1 , num2)=> (num1+num2);
+console.log(hifi(4,5));
+
+
 

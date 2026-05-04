@@ -49,3 +49,12 @@ function greater(num1 , num2)
     }
 }
 greater(4,5);
+// 4.Write a function that takes a name as a
+// parameter and prints "Hello [name]".
+function name1(name)
+{
+    console.log("hello" + name);
+}
+name1("priyanshu");
+
+

@@ -35,9 +35,18 @@ let q4 = function()
     console.log(message);   
 }
 q4();
+// 5.Create a function expression with two
+// parameters and display both values.
+let q5 = function(val1 , val2)
+{
+    return [val1 ,val2];
+}
+console.log(q5(4,5));
+
+
 // 7.Create a function expression and assign it to
 // another variable, then call both.
-q7i();
+ q7i();
 let q7 = function(name)
 {
     console.log("priyanshu");

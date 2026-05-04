@@ -29,3 +29,15 @@ function classC()
 classA();
 classB();
 classC();
+
+
+function test1() {
+  "use strict";
+  let y = 20; 
+}
+test1();
+function show() {
+  console.log(this);
+}
+
+show();
