@@ -15,7 +15,7 @@ function classA()
 function classB()
 {
     console.log("classB" , test);
-        // console.log("classC" , test2);
+    // console.log("classC" , test2);
 
 }
 function classC()
