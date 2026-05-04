@@ -2,8 +2,8 @@ console.log(a);
 console.log(b);
 
 
-var a ;
-let b ;
+var a=10 ;
+let b=20 ;
 // const c = 30;
 // a = 50;
 // function hello() {
