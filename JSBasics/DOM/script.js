@@ -8,6 +8,6 @@ function submit()
 
 
    document.getElementById("dataCard").classList.add("divShow");
-    document.getElementById("dataCard").classList.remove("divHide");
+   document.getElementById("dataCard").classList.remove("divHide");
 
 }
