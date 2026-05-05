@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="dom-assignment.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <form>
+        <div class="container mt-3 w-50">
+            <input type="email" class="form-control mb-3" placeholder="Enter your Email" id="email">
+            <input type="password" class="form-control mb-3" placeholder="Enter your password " id="password">
+            <button id="button" class="btn btn-primary d-block mx-auto" onclick="changes2(event)">submit</button>
+        </div>
+    </form>
+
+    <div class=" mt-4">
+        <div id="resultdiv" class="container border border-3 p-3 w-50 d-none">
+            <span id="emailData">Email : </span>
+            <br>
+            <span id="passwordData">password : </span>
+        </div>
+    </div>
+
+    <!-- Bootstrap link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="dom-assignment.js"></script>
+  </body>
+</html>
