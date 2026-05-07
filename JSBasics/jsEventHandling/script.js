@@ -32,3 +32,8 @@ function changeBulbColor()
         document.getElementById("bulb1").style.backgroundColor = color;
 
 }
+
+function reset()
+{
+    window.location.reload();
+}
