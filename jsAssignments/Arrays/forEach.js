@@ -45,3 +45,4 @@ arr10.forEach((array , index , el)=>
     array[index]= el*250;
 })
 console.log(arr10);
+
