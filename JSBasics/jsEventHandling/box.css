@@ -19,6 +19,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+    gap: 10px
+    ;
 
+
+}
+.distance{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }

@@ -39,10 +39,24 @@ console.log(arr9);
 // 12. Write a program and explain the role
 // of element, index, and array parameters
 // in forEach().
-let arr10 = [25,45,68,78];
-arr10.forEach((array , index , el)=>
-{
-    array[index]= el*250;
-})
-console.log(arr10);
+    let arr10 = [25,45,68,78];
+    arr10.forEach((el,index,array)=>
+    {
+        array[index]= el*250;
+    })
+    console.log(arr10);
+    let result = arr10.forEach((el)=> {
+         return el*3
+    });
+    console.log(result);
 
+// function details() {
+//   let name = document.getElementById("name").value;
+//   let city = document.getElementById("city").value;
+//   console.log(name);
+//   console.log(city);
+
+//   document.getElementById("dataName").innerText = name;
+//   document.getElementById("dataCity").innerText = city;
+//   document.getElementById("result").style.display = "flex";
+// }
