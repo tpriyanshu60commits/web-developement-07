@@ -18,6 +18,7 @@ console.log(result3);
 // 4.Create an array of numbers and use filter() to
 // remove negative numbers.
 let result4 = arr.filter((el)=> el<0);
+j2
 console.log(result4);
 // 5.Create an array of numbers and use filter() to
 // get only odd numbers. 
