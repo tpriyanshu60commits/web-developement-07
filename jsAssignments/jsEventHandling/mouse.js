@@ -41,3 +41,7 @@ document.getElementById("q7").addEventListener("mouseover", function()
 })
 // 8.Create a button and change its text to "Clicked
 // Successfully" when clicked
+ document.getElementById("q8").addEventListener("click", function()
+{
+    this.innerText = "changed successfully"
+})
