@@ -1,0 +1,69 @@
+form
+{
+    height: 100vh;
+    width: 100%;
+    background-color: bisque;
+    padding-top: 40px;
+}
+.container
+{
+    height: 600px;
+    width: 500px !important;
+    max-width: 100%;
+    border: 1px solid #000;
+    background-color:#001F4E;
+    padding: 10px;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+.container .upper
+{
+    color: white;
+    background-color: #FE851B;
+    padding: 10px;
+    font-size: 25px ;
+    font-weight: 700;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+    width: 80%;
+    height: 10%;
+}
+.container .lower
+{
+    padding: 20px;
+    width: 85%;
+    height: 90%;
+    background-color: #fff;
+    border-radius: 25px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 20px;
+}
+.lower #firstInput
+{
+    position: relative;
+    width: 100%;
+}
+.lower #BillAmount
+{
+    width: 90%;
+}
+.lower .secondInput
+{
+    position: relative;
+    width: 90%;
+}
+.secondInput i
+{
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    pointer-events: none;
+}

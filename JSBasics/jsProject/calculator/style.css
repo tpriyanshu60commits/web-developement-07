@@ -8,6 +8,8 @@ form {
     height: 550px;
     width: 370px !important;
     border-radius: 25px;
+    box-sizing: border-box;
+
 }
 
 
