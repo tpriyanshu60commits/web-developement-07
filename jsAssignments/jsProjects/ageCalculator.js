@@ -12,5 +12,4 @@ document.querySelector("button").addEventListener("click", function (event) {
 
   let finalTip =  document.getElementById("dataTip").innerText = tipPerPerson;
     console.log(finalTip);
-    
 });
