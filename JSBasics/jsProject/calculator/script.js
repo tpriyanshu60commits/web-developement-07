@@ -1,10 +1,42 @@
-// document.getElementById("button").addEventListener("click" , (event)=>
-// {
-//     console.log(event.target);
-    
-// })
+let display = document.querySelector(".displayNumber");
 
-function Calculate(data)
+let expression = "";
+
+function Calculate(value)
 {
-    console.log(data);
+    if(value == "AC")
+    {
+        expression = "";
+        display.innerText = "0";
+    }
+
+    else if(value == "C")
+    {
+        expression = expression.slice(0, -1);
+
+        if(expression == "")
+        {
+            display.innerText = "0";
+        }
+        else
+        {
+            display.innerText = expression;
+        }
+    }
+
+    // = -> answer nikalo
+    else if(value == "=")
+    {
+        let answer = eval(expression);
+
+        display.innerText = answer;
+
+        expression = answer.toString();
+    }
+
+    else
+    {
+        expression = expression + value;
+        display.innerText = expression;
+    }
 }
