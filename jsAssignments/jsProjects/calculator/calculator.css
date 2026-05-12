@@ -69,14 +69,3 @@ form
     font-size: 20px;
 }
 
-.btn:focus
- ,.btn:active {
-     outline: none !important;
-    box-shadow: none !important;
-    border: none !important;
-
-}
-.btn:hover
-{
-    border: none !important;
-}
