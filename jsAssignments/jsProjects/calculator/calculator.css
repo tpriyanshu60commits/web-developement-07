@@ -45,13 +45,15 @@ form
     flex-direction: row;
     gap: 20px;
 }
-.displaybuttons .buttonsGroup .btn
+.displaybuttons .buttonsGroup .btns
 {
    background-color: #fff;
    border-radius: 50%;
    padding: 10px;
    width: 25%;
    height: 55px;
+   border: none;
+   color: rgba(0, 0, 0, 0.725);
 }
 #lastButton
 {
@@ -65,4 +67,16 @@ form
     border-radius: 25px ;
     color: white;
     font-size: 20px;
+}
+
+.btn:focus
+ ,.btn:active {
+     outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+
+}
+.btn:hover
+{
+    border: none !important;
 }
