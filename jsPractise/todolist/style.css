@@ -1,0 +1,47 @@
+section {
+    height: 100vh;
+    width: 100%;
+    background-color: #EDF5FE;
+}
+
+header {
+    width: 100%;
+    background-color: #085CE5;
+    color: #EDF3FC;
+    padding: 20px;
+    text-align: center;
+}
+section .tasks
+{
+    display: flex;
+    /* border: 1px solid #000; */
+    gap: 40px;
+    padding: 20px;
+    justify-content: center;
+
+}
+.tasks #taskInput
+{
+    width: 80%;
+    padding: 10px;
+}
+.tasks .buttonAddTask
+{
+    width: 10%;
+    padding: 10px;
+    background-color: #0E64EB;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    
+    i{
+        color: white;
+        font-size: 20px;
+    }
+}
+#button
+{
+     background-color: #0E64EB;
+     color: white;
+     border: none;
+}
