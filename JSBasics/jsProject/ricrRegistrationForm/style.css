@@ -1,0 +1,21 @@
+form
+{
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    background-color:antiquewhite;
+}
+.container
+{
+    /* max-width: 650px !important; */
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+}
+.info
+{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+}
