@@ -1,25 +1,32 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration From</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
   </head>
   <body>
     <header>
       <div class="bg-primary p-3 text-center">
-        <h2 class="text-light ">Institute Registration Form</h2>
+        <h2 class="text-light">Institute Registration Form</h2>
       </div>
     </header>
 
     <main>
       <div class="container my-4 p-5 bg-light rounded border shadow">
         <form id="registrationFrom">
-          <section class="bg-white p-3 rounded border mb-3 ">
+          <section class="bg-white p-3 rounded border mb-3">
             <div class="p-2 mt-2">
               <label for="fullName" class="form-label fw-bold">Full Name</label>
               <input
@@ -248,5 +255,358 @@
       crossorigin="anonymous"
     ></script>
     <script src="script.js"></script>
+  </body>
+</html> -->
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body class="bg-light">
+    <!-- Header -->
+    <header>
+      <div class="bg-primary p-3 text-center">
+        <h2 class="text-light">Institute Registration Form</h2>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <div class="container my-4">
+        <div class="bg-white p-4 rounded shadow border">
+          <form id="registrationForm">
+            <!-- Personal Details -->
+            <section class="border rounded p-3 mb-4">
+              <h4 class="mb-3 text-primary">Personal Details</h4>
+
+              <div class="mb-3">
+                <label for="fullName" class="form-label fw-bold">
+                  Full Name
+                </label>
+
+                <input
+                  type="text"
+                  id="fullName"
+                  class="form-control"
+                  placeholder="Rahul Kumar"
+                />
+
+                <span
+                  class="text-danger small"
+                  id="fullNameError"
+                ></span>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label fw-bold">
+                  Email
+                </label>
+
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="rahul@gmail.com"
+                />
+
+                <span class="text-danger small" id="emailError"></span>
+              </div>
+
+              <div class="mb-3">
+                <label for="phone" class="form-label fw-bold">
+                  Mobile Number
+                </label>
+
+                <input
+                  type="text"
+                  id="phone"
+                  class="form-control"
+                  placeholder="9876543210"
+                />
+
+                <span class="text-danger small" id="phoneError"></span>
+              </div>
+
+              <div class="mb-3">
+                <label for="dob" class="form-label fw-bold">
+                  Date of Birth
+                </label>
+
+                <input type="date" id="dob" class="form-control" />
+
+                <span class="text-danger small" id="dobError"></span>
+              </div>
+
+              <!-- Gender -->
+              <div class="mb-3">
+                <label class="form-label fw-bold d-block">
+                  Gender
+                </label>
+
+                <div class="d-flex gap-4 flex-wrap">
+                  <div class="form-check">
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      name="gender"
+                      id="male"
+                      value="Male"
+                    />
+
+                    <label class="form-check-label" for="male">
+                      Male
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      name="gender"
+                      id="female"
+                      value="Female"
+                    />
+
+                    <label class="form-check-label" for="female">
+                      Female
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      name="gender"
+                      id="others"
+                      value="Others"
+                    />
+
+                    <label class="form-check-label" for="others">
+                      Others
+                    </label>
+                  </div>
+                </div>
+
+                <span class="text-danger small" id="genderError"></span>
+              </div>
+            </section>
+
+            <!-- Qualification -->
+            <section class="border rounded p-3 mb-4">
+              <h4 class="mb-3 text-primary">Academic Details</h4>
+
+              <div class="mb-3">
+                <label for="qualification" class="form-label fw-bold">
+                  Last Completed Qualification
+                </label>
+
+                <select id="qualification" class="form-select">
+                  <option value="">Select Qualification</option>
+
+                  <option value="10">Matriculation</option>
+
+                  <option value="12">Intermediate</option>
+
+                  <option value="Diploma">Diploma</option>
+
+                  <option value="UG">Graduation</option>
+
+                  <option value="PG">Post Graduation</option>
+                </select>
+
+                <span
+                  class="text-danger small"
+                  id="qualificationError"
+                ></span>
+              </div>
+
+              <div class="mb-3">
+                <label for="marks" class="form-label fw-bold">
+                  Percentage / Grade
+                </label>
+
+                <input
+                  type="text"
+                  id="marks"
+                  class="form-control"
+                  placeholder="90% or A"
+                />
+
+                <span class="text-danger small" id="marksError"></span>
+              </div>
+            </section>
+
+            <!-- Course -->
+            <section class="border rounded p-3 mb-4">
+              <h4 class="mb-3 text-primary">Course Details</h4>
+
+              <div class="mb-3">
+                <label for="course" class="form-label fw-bold">
+                  Preferred Course
+                </label>
+
+                <select id="course" class="form-select">
+                  <option value="">Select Course</option>
+
+                  <option value="iitjee">IIT-JEE</option>
+
+                  <option value="neet">NEET</option>
+
+                  <option value="banking">Banking Exams</option>
+
+                  <option value="cacs">CA/CS</option>
+
+                  <option value="upsc">UPSC</option>
+                </select>
+
+                <span class="text-danger small" id="courseError"></span>
+              </div>
+
+              <!-- Timing -->
+              <div class="mb-3">
+                <label class="form-label fw-bold d-block">
+                  Batch Timing Preference
+                </label>
+
+                <div class="d-flex gap-4 flex-wrap">
+                  <div class="form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="morning"
+                      value="Morning"
+                    />
+
+                    <label class="form-check-label" for="morning">
+                      Morning
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="evening"
+                      value="Evening"
+                    />
+
+                    <label class="form-check-label" for="evening">
+                      Evening
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="afternoon"
+                      value="Afternoon"
+                    />
+
+                    <label class="form-check-label" for="afternoon">
+                      Afternoon
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="weekends"
+                      value="Weekends"
+                    />
+
+                    <label class="form-check-label" for="weekends">
+                      Weekends
+                    </label>
+                  </div>
+                </div>
+
+                <span class="text-danger small" id="timingsError"></span>
+              </div>
+            </section>
+
+            <!-- Address -->
+            <section class="border rounded p-3 mb-4">
+              <h4 class="mb-3 text-primary">Address Details</h4>
+
+              <div class="mb-3">
+                <label for="address" class="form-label fw-bold">
+                  Address
+                </label>
+
+                <textarea
+                  id="address"
+                  class="form-control"
+                  rows="3"
+                  placeholder="123 Main Street"
+                ></textarea>
+
+                <span class="text-danger small" id="addressError"></span>
+              </div>
+
+              <div class="mb-3">
+                <label for="city" class="form-label fw-bold">
+                  City
+                </label>
+
+                <input
+                  type="text"
+                  id="city"
+                  class="form-control"
+                  placeholder="Delhi"
+                />
+
+                <span class="text-danger small" id="cityError"></span>
+              </div>
+
+              <div class="mb-3">
+                <label for="pin" class="form-label fw-bold">
+                  Pin Code
+                </label>
+
+                <input
+                  type="text"
+                  id="pin"
+                  class="form-control"
+                  placeholder="110001"
+                />
+
+                <span class="text-danger small" id="pinError"></span>
+              </div>
+            </section>
+
+            <!-- Buttons -->
+            <div class="d-flex justify-content-between">
+              <button type="reset" class="btn btn-secondary">
+                Clear
+              </button>
+
+              <button type="submit" class="btn btn-primary">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
