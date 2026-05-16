@@ -11,12 +11,12 @@ addbutton.addEventListener("click", function () {
   }
   console.log(textValue);
 
-//   let outerContainer = document.createElement("div");
-//   outerContainer.className = "container border rounded-2 p-3";
-//   // outerContainer.innerText = textValue;
-//   // console.log(outerContainer);
+  //   let outerContainer = document.createElement("div");
+  //   outerContainer.className = "container border rounded-2 p-3";
+  //   // outerContainer.innerText = textValue;
+  //   // console.log(outerContainer);
 
-//   let orderList = document.createElement("ol");
+  //   let orderList = document.createElement("ol");
 
   let list = document.createElement("li");
   let taskContainer = document.createElement("div");
@@ -29,18 +29,28 @@ addbutton.addEventListener("click", function () {
 
   let deleteButton = document.createElement("button");
   deleteButton.className = "btn btn-danger px-5 me-3 d-flex gap-2 mt-2";
-  deleteButton.innerHTML  = `<i class="bi bi-trash3"></i> Delete`;
+  deleteButton.innerHTML = `<i class="bi bi-trash3"></i> Delete`;
 
-  deleteButton.addEventListener("click", function()
-{
-    list.remove();
-})
-taskContainer.appendChild(span);
-taskContainer.appendChild(deleteButton);
-list.appendChild(taskContainer);
-taskList.appendChild(list);
-taskInput.value="";
+  deleteButton.addEventListener("click", function () {
+    list.remove(textValue);
+  });
+  taskContainer.appendChild(span);
+  taskContainer.appendChild(deleteButton);
+  list.appendChild(taskContainer);
+  taskList.appendChild(list);
+
+  saveToLocalStorage();
+
+  taskInput.value = "";
 });
 
+function saveToLocalStorage(textValue) {
+  // const oldTask = localStorage.getItem(toDoTask);
+  const taskArray = JSON.parse(localStorage.getItem("toDoTask")) || [];
+  taskArray.push(textValue);
+  console.log(taskArray);
 
-
+  const newTaskArray = JSON.stringify(taskArray);
+  localStorage.setItem("newTaskArray : "+ newTaskArray);l
+  
+}

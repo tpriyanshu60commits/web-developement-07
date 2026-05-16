@@ -44,6 +44,8 @@ section .tasks
      background-color: #0E64EB;
      color: white;
      border: none;
+     /* width: 40%; */
+
 }
 /* #taskList
 {
