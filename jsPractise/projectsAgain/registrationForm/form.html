@@ -36,7 +36,6 @@
               class="manualError small text-danger"
               id="fullNameError"
             ></span>
-            <span></span>
           </div>
           <div class="d-flex flex-column gap-2">
             <label for="email" class="fw-medium">Email Address:</label>
@@ -78,6 +77,10 @@
               <input type="radio" name="gender" value="Female" />Female
               <input type="radio" name="gender" value="Others" />Others
             </div>
+            <span
+              class="manualError small text-danger"
+              id="selectedGenderError"
+            ></span>
           </div>
         </section>
 
@@ -95,6 +98,10 @@
               <option value="Graduate">Graduate</option>
               <option value="Postgraduate">Postgraduate</option>
             </select>
+            <span
+              class="manualError small text-danger"
+              id="lastCompletedQualificationError"
+            ></span>
           </div>
           <div class="d-flex flex-column gap-2">
             <label for="percentage">Percentage/Grade:</label>
@@ -104,6 +111,10 @@
               placeholder="85"
               id="percentage"
             />
+            <span
+              class="manualError small text-danger"
+              id="percentageError"
+            ></span>
           </div>
         </section>
         <!-- Course Information:-->
@@ -120,13 +131,21 @@
               <option value="BankingExams">Banking Exams,</option>
               <option value="UPSC">UPSC</option>
             </select>
+            <span
+              class="manualError small text-danger"
+              id="preferredCourseError"
+            ></span>
           </div>
           <div class="d-flex flex-column gap-2">
             <label for="batchTiming" class="fw-medium"
               >Batch Timing Preference:</label
             >
             <div class="d-flex gap-2 align-items-center">
-              <input type="checkbox" value="Morning" name="batchTiming"/>Morning
+              <input
+                type="checkbox"
+                value="Morning"
+                name="batchTiming"
+              />Morning
               <input
                 type="checkbox"
                 value="Afternoon"
@@ -143,6 +162,10 @@
                 name="batchTiming"
               />Weekend
             </div>
+            <span
+              class="manualError small text-danger"
+              id="selectedBatchTimingError"
+            ></span>
           </div>
         </section>
         <!-- Address Information:-->
@@ -158,6 +181,10 @@
               class="form-control"
               id="residentialAddress"
             />
+            <span
+              class="manualError small text-danger"
+              id="residentialAddressError"
+            ></span>
           </div>
           <div class="d-flex flex-column gap-2">
             <label for="city" class="fw-medium">City:</label>
@@ -167,6 +194,10 @@
               class="form-control"
               id="city"
             />
+            <span
+              class="manualError small text-danger"
+              id="cityError"
+            ></span>
           </div>
           <div class="d-flex flex-column gap-2">
             <label for="pinCode" class="fw-medium">Pin Code:</label>
@@ -176,6 +207,10 @@
               class="form-control"
               id="pinCode"
             />
+            <span
+              class="manualError small text-danger"
+              id="pinCodeError"
+            ></span>
           </div>
         </section>
 
@@ -192,6 +227,10 @@
               class="form-control"
               id="guardiansFullName"
             />
+            <span
+              class="manualError small text-danger"
+              id="guardiansFullNameError"
+            ></span>
           </div>
           <div class="d-flex flex-column gap-2">
             <label for="guardiansContactNumber" class="fw-medium"
@@ -203,6 +242,10 @@
               class="form-control"
               id="guardiansContactNumber"
             />
+            <span
+              class="manualError small text-danger"
+              id="guardiansContactNumberError"
+            ></span>
           </div>
         </section>
         <!--     Additional Information:-->
@@ -220,6 +263,10 @@
               <option value="SocialMedia">Social Media</option>
               <option value="Other">Other</option>
             </select>
+             <span
+              class="manualError small text-danger"
+              id="hearAboutUsError"
+            ></span>
           </div>
           <div class="d-flex flex-column gap-2">
             <label for="specialRequirements" class="fw-medium"
