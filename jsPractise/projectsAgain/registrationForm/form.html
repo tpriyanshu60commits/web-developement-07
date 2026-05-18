@@ -32,7 +32,10 @@
               class="form-control"
               id="fullName"
             />
-            <span class="manualError small text-danger" id="fullNameError"></span>
+            <span
+              class="manualError small text-danger"
+              id="fullNameError"
+            ></span>
             <span></span>
           </div>
           <div class="d-flex flex-column gap-2">
@@ -44,7 +47,6 @@
               id="email"
             />
             <span class="manualError small text-danger" id="emailError"></span>
-
           </div>
           <div class="d-flex flex-column gap-2">
             <label for="mobileNumber" class="fw-medium">Mobile Number:</label>
@@ -54,7 +56,10 @@
               class="form-control"
               id="mobileNumber"
             />
-            <span class="manualError small text-danger" id="mobineNumberError"></span>
+            <span
+              class="manualError small text-danger"
+              id="mobineNumberError"
+            ></span>
           </div>
           <div class="d-flex flex-column gap-2">
             <label for="dob" class="fw-medium">Date of Birth:</label>
@@ -117,16 +122,26 @@
             </select>
           </div>
           <div class="d-flex flex-column gap-2">
-            <label for="batchTiming">Batch Timing Preference:</label>
+            <label for="batchTiming" class="fw-medium"
+              >Batch Timing Preference:</label
+            >
             <div class="d-flex gap-2 align-items-center">
-              <input type="checkbox" value="Morning" id="batchTiming" />Morning
+              <input type="checkbox" value="Morning" name="batchTiming"/>Morning
               <input
                 type="checkbox"
                 value="Afternoon"
-                id="batchTiming"
+                name="batchTiming"
               />Afternoon
-              <input type="checkbox" value="Evening" id="batchTiming" />Evening
-              <input type="checkbox" value="Weekend" id="batchTiming" />Weekend
+              <input
+                type="checkbox"
+                value="Evening"
+                name="batchTiming"
+              />Evening
+              <input
+                type="checkbox"
+                value="Weekend"
+                name="batchTiming"
+              />Weekend
             </div>
           </div>
         </section>
@@ -165,10 +180,12 @@
         </section>
 
         <!--  Guardian Details Information:-->
-         <section class="d-flex flex-column gap-3 border p-3 rounded mb-3">
-          <h4 class="text-primary fw-bold"> Guardian Details:</h4>
+        <section class="d-flex flex-column gap-3 border p-3 rounded mb-3">
+          <h4 class="text-primary fw-bold">Guardian Details:</h4>
           <div class="d-flex flex-column gap-2">
-            <label for="guardiansFullName" class="fw-medium">Guardian’s Full Name::</label>
+            <label for="guardiansFullName" class="fw-medium"
+              >Guardian’s Full Name::</label
+            >
             <input
               type="text"
               placeholder="Suresh Vardhan"
@@ -177,17 +194,19 @@
             />
           </div>
           <div class="d-flex flex-column gap-2">
-            <label for="guardiansContactNumber" class="fw-medium">Guardian’s Contact Number:</label>
+            <label for="guardiansContactNumber" class="fw-medium"
+              >Guardian’s Contact Number:</label
+            >
             <input
               type="number"
               placeholder="9876543211"
               class="form-control"
               id="guardiansContactNumber"
             />
-          </div>      
+          </div>
         </section>
-         <!--     Additional Information:-->
-         <section class="d-flex flex-column gap-3 border p-3 rounded mb-3">
+        <!--     Additional Information:-->
+        <section class="d-flex flex-column gap-3 border p-3 rounded mb-3">
           <h4 class="text-primary fw-bold">Additional Information:</h4>
           <div class="d-flex flex-column gap-2">
             <label for="hearAboutUs" class="fw-medium"
@@ -203,11 +222,23 @@
             </select>
           </div>
           <div class="d-flex flex-column gap-2">
-            <label for="specialRequirements" class="fw-medium">Special Requirements:</label>
-            <textarea name="" id="specialRequirements" rows="3" class="form-control"></textarea>
-          </div>      
+            <label for="specialRequirements" class="fw-medium"
+              >Special Requirements:</label
+            >
+            <textarea
+              name=""
+              id="specialRequirements"
+              rows="3"
+              class="form-control"
+            ></textarea>
+          </div>
         </section>
+        <div class="d-flex justify-content-between">
+          <button type="reset" class="btn btn-info px-4">reset</button>
+          <button type="submit" class="btn btn-primary px-4">submit</button>
+        </div>
       </form>
     </div>
+    <script src="form.js"></script>
   </body>
 </html>
