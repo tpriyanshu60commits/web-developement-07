@@ -43,6 +43,9 @@ function addNewTask() {
 
   document.getElementById("taskList").appendChild(LI);
 
+
+
+
   saveToLocalStorage(taskToAdd);
 
   document.getElementById("newTask").value = "";
@@ -50,13 +53,17 @@ function addNewTask() {
 
 function saveToLocalStorage(taskToAdd) {
   const TaskArray = JSON.parse(localStorage.getItem("toDoTask")) || [];
+  // localStorage.setItem("toDoTask", JSON.stringify("sleep"))
+  // localStorage.setItem("toDoTask", JSON.stringify("walk"))
+  // let again = localStorage.getItem("toDoTask")
+  // console.log(again);
+   TaskArray.push(taskToAdd);
 
-  TaskArray.push(taskToAdd);
+   const newTaskArray = JSON.stringify(TaskArray);
 
-  const newTaskArray = JSON.stringify(TaskArray);
-
-  localStorage.setItem("toDoTask", newTaskArray);
+   localStorage.setItem("toDoTask", newTaskArray);
 }
+saveToLocalStorage();//---yeh mene likha hai
 
 function getTaskFromLocalStorage() {
   const TaskArray = JSON.parse(localStorage.getItem("toDoTask")) || [];
@@ -110,18 +117,18 @@ function getTaskFromLocalStorage() {
 
 getTaskFromLocalStorage();
 
-function removeTaskFromLocalStorage(taskItem) {
-  console.log(taskItem);
+// function removeTaskFromLocalStorage(taskItem) {
+//   console.log(taskItem);
 
-  const TaskArray = JSON.parse(localStorage.getItem("toDoTask"));
+//   const TaskArray = JSON.parse(localStorage.getItem("toDoTask"));
 
-  console.log(TaskArray);
+//   console.log(TaskArray);
 
-  const newTaskArray = TaskArray.filter((item) => item !== taskItem);
+//   const newTaskArray = TaskArray.filter((item) => item !== taskItem);
 
-  console.log(newTaskArray);
+//   console.log(newTaskArray);
 
-  const newTaskString = JSON.stringify(newTaskArray);
+//   const newTaskString = JSON.stringify(newTaskArray);
 
-  localStorage.setItem("toDoTask", newTaskString);
-}
+//   localStorage.setItem("toDoTask", newTaskString);
+// }
