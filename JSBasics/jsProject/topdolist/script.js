@@ -63,7 +63,7 @@ function saveToLocalStorage(taskToAdd) {
 
    localStorage.setItem("toDoTask", newTaskArray);
 }
-saveToLocalStorage();//---yeh mene likha hai
+// saveToLocalStorage();//---yeh mene likha hai
 
 function getTaskFromLocalStorage() {
   const TaskArray = JSON.parse(localStorage.getItem("toDoTask")) || [];
@@ -117,18 +117,18 @@ function getTaskFromLocalStorage() {
 
 getTaskFromLocalStorage();
 
-// function removeTaskFromLocalStorage(taskItem) {
-//   console.log(taskItem);
+function removeTaskFromLocalStorage(taskItem) {
+  console.log(taskItem);
 
-//   const TaskArray = JSON.parse(localStorage.getItem("toDoTask"));
+  const TaskArray = JSON.parse(localStorage.getItem("toDoTask"));
 
-//   console.log(TaskArray);
+  console.log(TaskArray);
 
-//   const newTaskArray = TaskArray.filter((item) => item !== taskItem);
+  const newTaskArray = TaskArray.filter((item) => item !== taskItem);
 
-//   console.log(newTaskArray);
+  console.log(newTaskArray);
 
-//   const newTaskString = JSON.stringify(newTaskArray);
+  const newTaskString = JSON.stringify(newTaskArray);
 
-//   localStorage.setItem("toDoTask", newTaskString);
-// }
+  localStorage.setItem("toDoTask", newTaskString);
+}
