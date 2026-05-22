@@ -43,9 +43,6 @@ function addNewTask() {
 
   document.getElementById("taskList").appendChild(LI);
 
-
-
-
   saveToLocalStorage(taskToAdd);
 
   document.getElementById("newTask").value = "";
@@ -57,14 +54,13 @@ function saveToLocalStorage(taskToAdd) {
   // localStorage.setItem("toDoTask", JSON.stringify("walk"))
   // let again = localStorage.getItem("toDoTask")
   // console.log(again);
-   TaskArray.push(taskToAdd);
+  TaskArray.push(taskToAdd);
 
-   const newTaskArray = JSON.stringify(TaskArray);
-
-   localStorage.setItem("toDoTask", newTaskArray);
+  const newTaskArray = JSON.stringify(TaskArray);
+  localStorage.setItem("toDoTask", newTaskArray);
 }
 // saveToLocalStorage();//---yeh mene likha hai
-
+1 
 function getTaskFromLocalStorage() {
   const TaskArray = JSON.parse(localStorage.getItem("toDoTask")) || [];
 
@@ -132,3 +128,26 @@ function removeTaskFromLocalStorage(taskItem) {
 
   localStorage.setItem("toDoTask", newTaskString);
 }
+
+
+function getData(data) {
+  return new Promise((resolve, reject) => {
+    console.log("Getting Data...");
+
+    setTimeout(() => {
+      if (data === 3) {
+        reject(console.log("Your request is rejected"));
+      } else {
+        resolve(console.log("Your data: " + data));
+      }
+    }, 1000);
+  });
+}
+
+let om = getData(1)
+  .then(getData(2))
+  .then(getData(3))
+  .then(getData(4))
+  .then(getData(5))
+  .then(getData(6))
+  .catch(); 
