@@ -17,36 +17,26 @@
     />
   </head>
   <body>
+    <div class="w-25 bg-light rounded shadow border mx-auto mt-5 p-3">
+      <h1 class="text-center mb-3">Age calculator</h1>
 
+      <form class="d-flex flex-column gap-4 align-items-center">
+        <label for="DOB">Enter your Date of Birth</label>
+        <input type="date" name="DOB" id="DOB" class="form-control" />
+        <label for="CurrentDate">Choose Current Date</label>
+        <input
+          type="date"
+          name="CurrentDate"
+          id="CurrentDate"
+          class="form-control"
+        />
+        <button type="submit" class="btn btn-primary mb-4">Submit</button>
+      </form>
 
-    <div class="w-25 bg-light rounded shadow border mx-auto mt-5 p-3" >
-        <h1 class="text-center mb-3">Age calculator</h1>
-
-        <form class="d-flex flex-column gap-4 align-items-center">
-            <label for="DOB">Enter your Date of Birth</label>
-            <input type="date" name="DOB" id="DOB" class="form-control">
-             <label for="CurrentDate">Choose Current Date</label>
-            <input type="date" name="CurrentDate" id="CurrentDate" class="form-control">
-            <button type="submit" class="btn btn-primary mb-4">Submit</button>
-        </form>
-
-        <div class="fw-bold  text-center">
-          Your Age is :  <span id="MyAge">XX</span>Years
-        </div>
-
-        
-
-
-
+      <div class="fw-bold text-center">
+        Your Age is : <span id="MyAge">XX</span>Years
+      </div>
     </div>
-
-
-
-
-
-
-
-
 
     <!-- script bootstrap -->
     <script
