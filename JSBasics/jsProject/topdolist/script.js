@@ -39,9 +39,9 @@ function addNewTask() {
 
   LI.appendChild(DIV);
 
-  document.getElementById("taskDiv").classList.remove("d-none");
-
   document.getElementById("taskList").appendChild(LI);
+
+  document.getElementById("taskDiv").classList.remove("d-none");
 
   saveToLocalStorage(taskToAdd);
 
@@ -60,7 +60,7 @@ function saveToLocalStorage(taskToAdd) {
   localStorage.setItem("toDoTask", newTaskArray);
 }
 // saveToLocalStorage();//---yeh mene likha hai
-1 
+
 function getTaskFromLocalStorage() {
   const TaskArray = JSON.parse(localStorage.getItem("toDoTask")) || [];
 
@@ -116,7 +116,7 @@ getTaskFromLocalStorage();
 function removeTaskFromLocalStorage(taskItem) {
   console.log(taskItem);
 
-  const TaskArray = JSON.parse(localStorage.getItem("toDoTask"));
+  const TaskArray = JSON.parse(localStorage.getItem("toDoTask"))||[];
 
   console.log(TaskArray);
 
@@ -128,26 +128,3 @@ function removeTaskFromLocalStorage(taskItem) {
 
   localStorage.setItem("toDoTask", newTaskString);
 }
-
-
-function getData(data) {
-  return new Promise((resolve, reject) => {
-    console.log("Getting Data...");
-
-    setTimeout(() => {
-      if (data === 3) {
-        reject(console.log("Your request is rejected"));
-      } else {
-        resolve(console.log("Your data: " + data));
-      }
-    }, 1000);
-  });
-}
-
-let om = getData(1)
-  .then(getData(2))
-  .then(getData(3))
-  .then(getData(4))
-  .then(getData(5))
-  .then(getData(6))
-  .catch(); 
