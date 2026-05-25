@@ -41,7 +41,11 @@ document
       pinCode: pinCode,
     };
     console.log("registrationFormData : ", registrationFormData);
-    validateData(registrationFormData); //validateData function calling
+    let result = validateData(registrationFormData); //validateData function calling
+    if(result)
+    {
+      alert("registration successful");
+    }
   });
 
 function validateData(data) {
@@ -86,6 +90,24 @@ function validateData(data) {
     document.getElementById("genderError").innerHTML = "Select Gender";
     isValid = false;
   }
+  if(data.dob==="")
+  { 
+    document.getElementById("dobError").innerHTML = "enter your DOB";
+    isValid = false;
+  }
+  else
+  {
+    let birthdate = new Date(data.dob);
+    let todayDate = new Date();
+    let age = todayDate.getFullYear()-birthdate.getFullYear();
+    if(age<15)
+      {
+        document.getElementById("dobError").innerHTML = "Minimum age is 15 years";
+        isValid = false;
+      } 
+  
+  
+  }
 
   // QUALIFICATION
   if (!data.lastCompletedQualification) {
@@ -126,7 +148,7 @@ function validateData(data) {
   if (!data.pinCode) {
     document.getElementById("pinCodeError").innerHTML = "Pin Code Required";
     isValid = false;
-  } else if (!pinReg.test(data.pinCode)) {
+  } else if (!pincodeReg.test(data.pinCode)) {
     document.getElementById("pinCodeError").innerHTML =
       "Enter valid 6-digit pin code";
     isValid = false;
