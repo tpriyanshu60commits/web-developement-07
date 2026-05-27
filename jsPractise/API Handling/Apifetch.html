@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fetch API Example</title>
+</head>
+<body>
+
+ 
+
+  <script>
+
+async function getusers()
+{
+   try{
+     const responce = await fetch("https://jsonplaeholder.typicode.com/users");
+    console.log(responce);
+
+    let data = await responce.json();
+    console.log(data);
+   }
+   catch(error)
+   {
+     console.log("Error Found");
+   }
+    
+    
+    
+}
+
+getusers();
+
+
+
+  </script>
+
+</body>
+</html>
