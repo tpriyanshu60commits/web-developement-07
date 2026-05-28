@@ -1,0 +1,41 @@
+.Container {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url("./wet-leaves-rainy-weather-water-drops-closeup-macro-rain-3840x2160-4631 (1).jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.innerdiv {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    padding: 20px;
+    color: white;
+}
+
+.innerdiv .searchbox {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    height: 70px;
+    margin-top: 10px;
+}
+
+.innerdiv .searchbox input {
+    flex: 1;
+}
+
+.innerdiv .searchbox button {
+    background-color: transparent;
+    border-radius: 20%;
+}

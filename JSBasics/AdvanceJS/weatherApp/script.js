@@ -11,9 +11,6 @@ async function getWeather() {
 
   const response = await fetch(WEATHER_API);
   const data = await response.json();
-
-  //console.log(data);
-
   const temperature = data.main.temp - 273.15;
 
   document.getElementById("Temperature").innerText = temperature.toFixed(2);
