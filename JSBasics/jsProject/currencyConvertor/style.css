@@ -1,0 +1,77 @@
+
+body {
+  background-color: #f3f4f6;
+}
+
+.mainBox {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.converterBox {
+  width: 100%;
+  max-width: 700px;
+
+  background-color: white;
+
+  padding: 30px;
+
+  border-radius: 15px;
+
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flagBox {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 10px;
+}
+
+.flagBox img {
+  width: 70px;
+  height: 70px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 1px solid gray;
+}
+
+.swapBtn {
+  margin-top: 35px;
+}
+
+#errorMsg {
+  color: red;
+
+  font-weight: bold;
+
+  margin-top: 10px;
+}
+
+.resultBox {
+  background-color: #f8f9fa;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  text-align: center;
+}
+
+#newAmount {
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .swapBtn {
+    margin-top: 0px;
+  }
+}

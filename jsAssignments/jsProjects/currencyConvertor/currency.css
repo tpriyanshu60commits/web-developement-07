@@ -1,0 +1,40 @@
+.outerdiv
+{
+    height:100vh;
+    width: 100vw;
+    background-color: black;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: start;
+    align-items: center;
+}
+.Container
+{
+    height: 500px;
+    width: 800px;
+    background-color: #fff;
+    border-radius: 25px;
+}
+header
+{
+    background-color: #396ecf;
+    width: 100%;
+    color: white;
+}
+.div1
+{
+    display: flex;
+    width: 100%;
+    gap: 25px;
+}
+.div1 .flagdiv1,.flagdiv2
+{
+    flex: 1;
+}
+.flag
+{
+width: 100px;
+height: 70px; 
+}
