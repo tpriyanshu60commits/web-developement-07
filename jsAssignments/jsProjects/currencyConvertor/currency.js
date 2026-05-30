@@ -30,10 +30,6 @@ const country = [
   },
 ];
 
-// =======================
-// SELECT ELEMENTS
-// =======================
-
 const fromCurrency = document.getElementById("fromCurrency");
 
 const toCurrency = document.getElementById("toCurrency");
@@ -48,13 +44,8 @@ const convertBtn = document.getElementById("convertBtn");
 
 const realAmount = document.getElementById("realAmount");
 
-// =======================
-// LOAD COUNTRY
-// =======================
-
 function loadCountry() {
   country.forEach((item) => {
-    // FROM OPTION
     const option1 = document.createElement("option");
 
     option1.value = item.currencyCode + "_" + item.countryCode;
@@ -63,7 +54,6 @@ function loadCountry() {
 
     fromCurrency.appendChild(option1);
 
-    // TO OPTION
     const option2 = document.createElement("option");
 
     option2.value = item.currencyCode + "_" + item.countryCode;
@@ -73,22 +63,16 @@ function loadCountry() {
     toCurrency.appendChild(option2);
   });
 
-  // DEFAULT VALUE
   fromCurrency.value = "USD_US";
 
   toCurrency.value = "INR_IN";
 
-  // UPDATE FLAGS
   updateFromFlag();
 
   updateToFlag();
 }
 
 loadCountry();
-
-// =======================
-// UPDATE FROM FLAG
-// =======================
 
 function updateFromFlag() {
   const value = fromCurrency.value;
@@ -98,10 +82,6 @@ function updateFromFlag() {
   fromFlag.src = `https://flagsapi.com/${countryCode}/flat/64.png`;
 }
 
-// =======================
-// UPDATE TO FLAG
-// =======================
-
 function updateToFlag() {
   const value = toCurrency.value;
 
@@ -110,48 +90,31 @@ function updateToFlag() {
   toFlag.src = `https://flagsapi.com/${countryCode}/flat/64.png`;
 }
 
-// =======================
-// CHANGE EVENT
-// =======================
-
 fromCurrency.addEventListener("change", updateFromFlag);
 
 toCurrency.addEventListener("change", updateToFlag);
 
-// =======================
-// CONVERT CURRENCY
-// =======================
-
 async function convertCurrency() {
-  // BUTTON LOADING
   convertBtn.innerHTML = "Loading...";
-
-  // GET VALUE
   const fromValue = fromCurrency.value;
 
   const toValue = toCurrency.value;
 
-  // SPLIT
   const fromCode = fromValue.split("_")[0];
 
   const toCode = toValue.split("_")[0];
 
   try {
-    // API CALL
     const response = await fetch(
       `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${fromCode.toLowerCase()}.json`,
     );
 
-    // JSON DATA
     const data = await response.json();
 
-    // RATE
     const rate = data[fromCode.toLowerCase()][toCode.toLowerCase()];
 
-    // FINAL AMOUNT
     const finalAmount = amount.value * rate;
 
-    // SHOW RESULT
     realAmount.innerText = `${finalAmount.toFixed(2)} ${toCode}`;
   } catch (error) {
     realAmount.innerText = "Something Went Wrong";
