@@ -34,3 +34,6 @@ console.log(arr5);
 let arr6 = [3,4,5];
 arr6.unshift(1,2);
 console.log(arr6);
+
+
+

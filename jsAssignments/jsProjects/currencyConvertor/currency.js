@@ -95,7 +95,6 @@ fromCurrency.addEventListener("change", updateFromFlag);
 toCurrency.addEventListener("change", updateToFlag);
 
 async function convertCurrency() {
-  convertBtn.innerHTML = "Loading...";
   const fromValue = fromCurrency.value;
 
   const toValue = toCurrency.value;
@@ -110,6 +109,8 @@ async function convertCurrency() {
     );
 
     const data = await response.json();
+    console.log(data);
+    
 
     const rate = data[fromCode.toLowerCase()][toCode.toLowerCase()];
 
