@@ -138,3 +138,132 @@ function q12(a,b)
     }
 }
 console.log(q12(2,3));
+
+console.log("Arrow Function - practice questions");
+// 1.Create an arrow function that prints “Welcome
+// to JavaScript”.
+let q1arrow = ()=>
+{
+    console.log("Welcome to javascript");
+}
+q1arrow();
+
+// 2.Write an arrow function that takes a name and
+// prints a greeting message.
+
+let q2arrow = (name)=>
+{
+    console.log(name);
+    
+}
+q2arrow("priyanshu")
+
+
+
+
+
+// 3.Create an arrow function that adds two
+// numbers and returns the result.
+
+let q3arrow= (a,b)=>
+{
+    return a+b;
+}
+console.log(q3arrow(4,5));
+
+
+
+
+// 4.Write an arrow function that multiplies two
+// numbers and prints the output.
+let q4arrow= (a,b)=>
+{
+    return a*b;
+}
+console.log(q4arrow(4,5));
+
+
+
+
+
+
+// 5.Create an arrow function that returns
+// the square of a number.
+let q5arrow= (a)=>
+{
+    return a*a;
+}
+console.log(q5arrow(4));
+
+
+
+
+
+
+// 6.Write an arrow function that takes three
+// numbers and returns their sum.
+let q6arrow= (a,b,c)=>
+{
+    return a+b+c;
+}
+console.log(q6arrow(4,5,7));
+
+
+
+
+
+
+// 7.Create an arrow function that returns
+// the length of a given string.
+
+let q7string =(str)=>
+{
+    console.log(str.length);
+    
+}
+q7string("hello ji")
+
+
+
+
+
+// 8.Create an arrow function that checks whether a
+// number is positive or negative.
+
+let q8arrow = (num)=>
+{
+    if(num>0)
+    {
+        return "positive";
+    }
+    else
+    {
+        return "negative";
+    }
+}
+console.log(q8arrow(5));
+
+
+
+
+// 9.Write an arrow function that finds the
+// difference between two numbers.
+
+let q9arrow= (a,b)=>
+{
+    return a-b;
+}
+console.log(q9arrow(4,5));
+
+
+
+
+
+//  10.Create an arrow function that returns a
+// message like “Learning Arrow Functions”.
+
+let q10arrow= (message)=>
+{
+    return message;
+}
+console.log(q10arrow("Learning Arrow Functions"));
