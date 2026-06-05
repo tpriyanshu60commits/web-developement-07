@@ -267,3 +267,91 @@ let q10arrow= (message)=>
     return message;
 }
 console.log(q10arrow("Learning Arrow Functions"));
+
+
+console.log("Practice Questions — Anonymous Functions");
+
+// 1.Create an anonymous function and assign it to
+// a variable.
+
+let q1anony = function()
+{
+console.log("hello");
+ 
+}
+q1anony();
+
+// 2.Create an anonymous function that prints
+// "Hello" using a variable.
+let q2anony = function()
+{
+    console.log("hello again");
+    
+}
+q2anony();
+
+
+
+
+// 3.Create an anonymous function that adds two
+// numbers and returns the result.
+
+let q3anony = function(a,b)
+{
+    return a+b;
+}
+console.log(q3anony(4,5));
+
+
+
+
+
+// 4.Call an anonymous function stored in a variable
+// and print the output.
+let q4anony = function() {
+    console.log("Hello, Welcome!");
+};
+
+q4anony();
+
+
+
+
+
+// 5.Pass an anonymous function
+// inside setTimeout().
+
+setTimeout((item)=>
+{
+    console.log("this is a set timeout function");
+},2000)
+    
+
+
+
+
+// 6.Use setTimeout() with an anonymous function
+// to print a message after 2 seconds.
+
+setTimeout(function(){
+    console.log("hello after 2 seconds");
+},2000)
+
+
+
+
+
+// 7.Create an Immediately Invoked Function
+// (IIFE) using an anonymous function.
+
+(function() {
+console.log("Run immediately");
+})();
+
+
+
+
+// 8.Write an IIFE that prints a message instantly
+(function() {
+console.log("Run immediately");
+})();
