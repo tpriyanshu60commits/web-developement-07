@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="">
+    <header class="bg-primary p-2 rounded-bottom">
+      <h1
+        class="text-light text-center mb-0 d-flex gap-2 justify-content-center"
+      >
+        <i class="bi bi-currency-exchange"></i>Currency Convertor
+      </h1>
+      <p class="opacity-75 text-center text-light mt-2">
+        Convert amounts between world currencies in real time
+      </p>
+    </header>
+
+    <div class="container mt-5 text-black p-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="border p-4 rounded">
+            <div class="row border">
+              <div class="col-lg-6 col-md-12">
+                <div class="d-flex gap-4 p-2">
+                  <div class="p-2 d-flex flex-column gap-3">
+                    <p class="fw-bolder">From</p>
+                    <img
+                      src="https://cdn.britannica.com/97/1597-050-008F30FA/Flag-India.jpg"
+                      alt=""
+                      class=" w-50"
+                      id="fromFlag"
+                    />
+                    <select name="" id="fromCurrency" class="form-control">
+                      <!-- <option value="India">India</option>
+                      <option value="america">America</option> -->
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12">
+                <div class="d-flex gap-4 p-2">
+                  <div class="p-2 d-flex flex-column gap-3">
+                    <p class="fw-bolder">To</p>
+                    <img
+                      src="https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg "
+                      alt=""
+                      class="w-50"
+                      id="toFlag"
+                    />
+                    <select name="" id="toCurrency"class="form-control mt-2">
+                      <!-- <option value="India">India</option>
+                      <option value="america">America</option> -->
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- middle convertor -->
+            <div class="p-2 border mt-2 rounded">
+              <div class="">
+                <p class="fw-medium mb-2">Enter Amount</p>
+                <div class="d-flex gap-2 justify-content-center">
+                  <input
+                    type="text"
+                    class="form-control w-75"
+                    placeholder="Enter amount"
+                    id="amount"
+                  />
+                  <button class="btn btn-primary d-flex gap-1 justify-content-center" id="convertBtn"><i class="bi bi-arrow-clockwise"></i>Convert</button>
+                </div>
+              </div>
+            </div>
+            <!-- lower represeting currency -->
+            <div class="p-5 border rounded mt-2">
+                <div class="d-flex justify-content-center">
+                    <h2>Converted Amount : <span id="updatedCurrency">2500</span></h2>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- bootstrap links -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
