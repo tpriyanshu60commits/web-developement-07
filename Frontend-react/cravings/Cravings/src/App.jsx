@@ -10,3 +10,14 @@ function App()
 }
 
 export default App;
+
+// const App = ()=>
+// {
+//   return (
+//     <>
+//     <div className="bg-green-200 p-3.25">App</div>
+
+//     </>
+//   )
+// }
+// export default App;

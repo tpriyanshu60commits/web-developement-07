@@ -4,21 +4,20 @@ import { FaSearch } from "react-icons/fa";
 function Header() {
   return (
     <>
-      <header className="p-3 text-light d-flex align-items-center justify-content-between">
-        <div className="px-3">
-          <img className="" src={Cravingslogo} alt="" />
+      <header className="h-16 bg-[#c2410c] flex justify-between items-center ">
+        <div className="">
+          <img className="w-20 mx-12" src={Cravingslogo} alt="" />
         </div>
-        <div className="d-flex gap-2 mx-4">
-          <button className=" px-3 py-1 bg-transparent loginButton">
+        <div className="flex gap-5  mr-5 ">
+          <button className="text-white px-4 py-1.5 border-transparent border-0 hover:border border-white rounded">
             Login
           </button>
-          <button className=" px-3 py-1 registerButton">Register</button>
+          <button className="text-[#c2410c] bg-white px-3 py-1.5 border border-transparent rounded hover:bg-transparent hover:border-white  hover:text-white transition">Register</button>
         </div>
       </header>
 
       {/* hero section */}
-      <section className="heroSection d-flex justify-content-center align-items-center">
-        {/* <img id="herosectionbackground" src={herosectionbackground} alt=""/> */}
+      {/* <section className="heroSection d-flex justify-content-center align-items-center">
         <div className=" text-light w-50 p-2">
           <h1 className="text-center fw-bolder">
             Your Favorite Food,
@@ -54,7 +53,7 @@ function Header() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
