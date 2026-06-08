@@ -1,5 +1,5 @@
 import Welcome,{Bye} from "./Pages/practise"
-
+import Counter from "./Pages/Hooks";
 function App() {
     const city = "bhopal";
   return (
@@ -8,7 +8,7 @@ function App() {
     <h1>city: {city}</h1>
         <Welcome />
         <Bye/>
-
+      <Counter/>
     </div>
   );
 }

@@ -65,7 +65,7 @@ header img {
 .heroSection
 {
   height: 85vh;
-  background-image: url("./pages/herosectionbackground.jpg");
+  background-image: url("./pages/images/herosectionbackground.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

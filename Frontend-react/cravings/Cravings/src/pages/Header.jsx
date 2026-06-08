@@ -1,5 +1,5 @@
-import Cravingslogo from "./Cravingslogo.png";
-import herosectionbackground from "./herosectionbackground.jpg";
+import Cravingslogo from "./images/Cravingslogo.png";
+import herosectionbackground from "./images/herosectionbackground.jpg";
 import { FaSearch } from "react-icons/fa";
 function Header() {
   return (
