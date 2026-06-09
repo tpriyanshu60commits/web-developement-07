@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="d-flex flex-column align-items-center vh-100 gap-2">
+      <header class="text-center bg-warning w-25 rounded-top-3 p-2 mt-4">
+        Tip Calculator
+      </header>
+      <div class="container border w-25 p-3 d-flex flex-column gap-3 rounded shadow">
+        <div>
+          <label class="fw-bold">Bill Amount</label>
+          <input type="text" placeholder="Enter Amount" class="form-control" id="billAmount"/>
+        </div>
+         <div>
+          <label class="fw-bold">How was the service ?</label>
+          <select id="serviceCharge" class="form-control"></select>
+        </div>
+         <div>
+          <label class="fw-bold">Total Number of Persons</label>
+          <input type="text" placeholder="Enter Amount" class="form-control" id="persons"/>
+        </div>
+        <button class="btn btn-primary mx-auto mt-3">Calculate</button>
+        <p class="text-center">Tip Amount :<span id="tipAmount"> </span><br> rupees Each</p>
+      </div>
+    </div>
+
+    <!-- bootstrap link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
