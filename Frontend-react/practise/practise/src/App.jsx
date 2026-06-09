@@ -1,5 +1,6 @@
 import Welcome,{Bye} from "./Pages/practise"
 import Counter from "./Pages/Hooks";
+import Login from "./Pages/login";
 function App() {
     const city = "bhopal";
   return (
@@ -9,6 +10,8 @@ function App() {
         <Welcome />
         <Bye/>
       <Counter/>
+      <br />
+      <Login/>
     </div>
   );
 }
