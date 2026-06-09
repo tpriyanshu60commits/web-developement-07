@@ -1,18 +1,22 @@
-function Counter()
-{
-    let count = 0;
-    const countIncrease = ()=>
-    {
-        count++;
-        console.log(count);
-        
-    }
+import { useState } from "react";
+function Counter() {
+  const[count , setCounter] = useState(0);
 
-    return(
-        <>
-        <h1>counter</h1>
-        <button onClick={countIncrease}>submit</button>
-        </>
-    )
+  const updateValue = ()=>
+  {
+    setCounter(count+1);
+    console.log(count);
+    
+  }
+  
+
+  return(
+      <>
+        <h1>{count}</h1>
+        <button onClick={updateValue}>update</button>
+      </>
+    
+  );
+
 }
 export default Counter;
