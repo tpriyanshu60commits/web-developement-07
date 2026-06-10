@@ -16,7 +16,7 @@ function Register() {
             <h1 className="text-[var(--color-primary)] font-bold text-center text-3xl">
               Create Account
             </h1>
-            <p className="text-center opacity-50 mt-2">
+            <p className="text-center opacity-50 ">
               Join us as a Customer, Restaurant, or Rider
             </p>
 
