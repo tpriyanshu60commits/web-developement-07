@@ -57,7 +57,7 @@ function Login() {
               </div>
             </div>
             <div className="mt-4">
-              <button className="w-full  rounded p-3 font-medium text-white bg-[var(--color-primary)]">
+              <button className="w-full cursor-pointer rounded p-3 font-medium text-white bg-[var(--color-primary)]">
                 Login
               </button>
             </div>

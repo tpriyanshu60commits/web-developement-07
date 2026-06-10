@@ -5,7 +5,7 @@ function Home() {
   return (
     <>
       {/* hero section */}
-      <section className="relative heroSection bg-amber-500 h-[85vh]">
+      <section className="relative heroSection bg-gray-500 h-[85vh]">
         <img
           src={heroSectionBackground}
           alt=""
@@ -29,8 +29,8 @@ function Home() {
                 Order Now
               </button>
             </div>
-            <div className="flex bg-white text-black gap-3 p-2 rounded mt-7 items-center">
-              <FaSearch className="text-gray-500 bg-white size-5" />
+            <div className="flex bg-white text-black gap-3 p-2.5 rounded mt-7 items-center">
+              <FaSearch className="text-gray-700 bg-white size-5" />
               <input
                 type="text"
                 placeholder="Search restaurents or dishes..."
