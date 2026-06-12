@@ -27,4 +27,10 @@ document
     }
 
     document.getElementById("realAmount").innerText = totalBill.toFixed(2);
+    
   });
+
+  document.getElementById("reset").addEventListener("click", function()
+{
+    document.getElementById("electricityBill").value= "";
+})
