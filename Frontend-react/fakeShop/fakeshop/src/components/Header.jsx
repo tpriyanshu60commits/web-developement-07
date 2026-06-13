@@ -8,9 +8,12 @@ function Header() {
         <div>
           <FaLuggageCart className="text-2xl text-white" />
         </div>
-        <div className="">
+        <div className="flex gap-3">
           <Link to="/home" className="text-white hover:underline">
             Home
+          </Link>
+          <Link to="/product" className="text-white hover:underline">
+            Product
           </Link>
         </div>
       </div>
