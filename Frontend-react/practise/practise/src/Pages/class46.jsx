@@ -8,14 +8,18 @@ function Class46() {
         
     // },[count])
 
-    const [name , updatename] = useState("");
+    // const [name , updatename] = useState("");
+    const [status , setStatus] = useState("Off")
 
   return (
     <>
     {/* <h1>{count}</h1>
     <button onClick={()=>updateCount(count+1)}>click me</button> */}
-    <h2>{name}</h2>
-    <input type="text" onChange={(e)=>updatename(e.target.value)} />
+    {/* <h2>{name}</h2>
+    <input type="text" onChange={(e)=>updatename(e.target.value)} /> */}
+
+    <h2>{status}</h2>
+    <button onClick={()=>setStatus("On")}>Turn ON</button>
     </> 
   );
 }
