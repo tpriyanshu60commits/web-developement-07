@@ -1,9 +1,23 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
 const App = ()=>
 {
   const[ name , newname] = useState(" priyanshu tiwari"); 
 
+  return(
+     <Fragment>
+      <NetflixCards />
+      <NetflixCards />
+      <NetflixCards />
+      <NetflixCards />
+      <NetflixCards />
+      <NetflixCards />
+    </Fragment>
+  )
+}
+export default App;
+
+const NetflixCards = ()=>{
   return(
     <>
     <h1>hello , {name}</h1>
@@ -16,5 +30,5 @@ const App = ()=>
     </div>
     </>
   )
+
 }
-export default App;
