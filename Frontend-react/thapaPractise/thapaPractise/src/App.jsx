@@ -1,34 +1,19 @@
-import { Fragment, useState } from "react";
-
-const App = ()=>
-{
-  const[ name , newname] = useState(" priyanshu tiwari"); 
-
-  return(
-     <Fragment>
-      <NetflixCards />
-      <NetflixCards />
-      <NetflixCards />
-      <NetflixCards />
-      <NetflixCards />
-      <NetflixCards />
-    </Fragment>
-  )
-}
-export default App;
-
-const NetflixCards = ()=>{
-  return(
+import Header from "./assets/Header";
+import { Link } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Upto8thvideo from "./assets/pages/upto8thvideo";
+import Video9ConditionalStatement from "./assets/pages/video9(conditionalStatement)";
+const App = () => {
+  return (
     <>
-    <h1>hello , {name}</h1>
-    <button onClick={()=>{newname("this is new one")}}>submit</button>
-    <hr />
-    <div>
-      <img src="favicon.svg" alt="" width={1000} height={400} />
-      <h2>react icon</h2>
-      <p>it is a react icon</p>
-    </div>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/upto8thvideo" element={<Upto8thvideo />} />
+          <Route path="/video9ConditionalStatement" element={<Video9ConditionalStatement />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
-
-}
+  );
+};
+export default App;
