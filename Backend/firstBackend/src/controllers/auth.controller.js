@@ -1,18 +1,21 @@
+import { decrypt } from "dotenv";
 import User from "../models/user.model.js";
+import bcrypt from "bcrypt";
 
-export const RegisterUser = async (req, res) => {
+export const RegisterUser = async (req, res, next) => {
   try {
     const { fullName, email, password, phone, gender, dob } = req.body;
 
     if (!fullName || !email || !password || !phone || !gender || !dob) {
-      res.status(400).json({ message: "All Feilds Required" });
-      return;
+      const error = new Error("All fields required");
+      error.statusCode = 400;
+      return next(error);
     }
-
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      res.status(409).json({ message: "Email Already Registered" });
-      return;
+      const error = new Error("Email Already Registered");
+      error.statusCode = 409;
+      return next(error);
     }
 
     const photoUrl = `https://placehold.co/600x400?text=${fullName.charAt(0).toUpperCase()}`;
@@ -21,57 +24,60 @@ export const RegisterUser = async (req, res) => {
       url: photoUrl,
       publicId: null,
     };
+    const SALT = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, SALT);
 
     const newUser = await User.create({
       fullName,
       email,
-      password,
+      password: hashedPassword,
       phone,
       gender,
       dob,
       photo,
     });
-
-    res.status(201).json({ message: "User Created Successfully" });
+    res.status(200).json({ message: "User Registered Successfully" });
   } catch (error) {
-    res.status(500).json({ message: "Internal Server Error" });
+    console.log(error.message);
+    next(error);
   }
 };
 
-export const LoginUser = async (req, res) => {
+export const LoginUser = async (req, res, next) => {
   try {
     const { email, password } = req.body;
-
     if (!email || !password) {
-      return res.status(400).json({ message: "All fields required" });
+      const error = new Error("All fields required");
+      error.statusCode = 400;
+      return next(error);
     }
-
+    
     const existingUser = await User.findOne({ email });
-
     if (!existingUser) {
-      return res.status(404).json({ message: "Email not registered" });
+      const error = new Error("Email not Registered");
+      error.statusCode = 404;
+      return next(error);
     }
+   
 
-    const isMatch = await bcrypt.compare(password, existingUser.password);
+    const isVerified = await bcrypt.compare(password, existingUser.password)    
 
-    if (!isMatch) {
-      return res.status(401).json({ message: "Incorrect password" });
+    if (!isVerified) {
+      const error = new Error("Incorrect Password");
+      error.statusCode = 401;
+      return next(error);
     }
-
+    
     res.status(200).json({
-      message: "Login successful",
-      user: {
-        id: existingUser._id,
-        fullName: existingUser.fullName,
-        email: existingUser.email,
-      },
+      message: "Welcome Back",
+      data: existingUser,
     });
-
-  } catch (error) {
-    res.status(500).json({ message: "Server error" });
+  } catch {
+    console.log(error.message);
+    next();
   }
 };
 
 export const LogoutUser = (req, res) => {
-  res.json({ message: "Logout Successfull from Controller" });
+  res.json({ message: "Logout Successfull from auth controller" });
 };
