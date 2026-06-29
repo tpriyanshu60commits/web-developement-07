@@ -11,6 +11,6 @@ const router = express.Router();
 //     res.send("Login Route");
 // });
 
-router.get("/login", login);
+router.post("/login", login);
 
 export default router;

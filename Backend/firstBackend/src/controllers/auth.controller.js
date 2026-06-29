@@ -51,23 +51,22 @@ export const LoginUser = async (req, res, next) => {
       error.statusCode = 400;
       return next(error);
     }
-    
+
     const existingUser = await User.findOne({ email });
     if (!existingUser) {
       const error = new Error("Email not Registered");
       error.statusCode = 404;
       return next(error);
     }
-   
 
-    const isVerified = await bcrypt.compare(password, existingUser.password)    
+    const isVerified = await bcrypt.compare(password, existingUser.password);
 
     if (!isVerified) {
       const error = new Error("Incorrect Password");
       error.statusCode = 401;
       return next(error);
     }
-    
+
     res.status(200).json({
       message: "Welcome Back",
       data: existingUser,
