@@ -4,34 +4,28 @@
 // }
 
 export const login = (req, res, next) => {
+  const { email, password } = req.body;
 
-    const { email, password } = req.body;
+  // Email Check
+  if (email !== "abc@gmail.com") {
+    const error = new Error("Email Not Registered");
 
-    // Email Check
-    if (email !== "abc@gmail.com") {
+    error.statusCode = 404;
 
-        const error = new Error("Email Not Registered");
+    return next(error);
+  }
 
-        error.statusCode = 404;
+  // Password Check
+  if (password !== "123456") {
+    const error = new Error("Password Incorrect");
 
-        return next(error);
+    error.statusCode = 401;
 
-    }
-
-    // Password Check
-    if (password !== "123456") {
-
-        const error = new Error("Password Incorrect");
-
-        error.statusCode = 401;
-
-        return next(error);
-
-    }
+    return next(error);
+  }
 
     // Success Response
     res.json({
-        message: "Login Success"
+        message: "Login Success",
     });
-
 };
