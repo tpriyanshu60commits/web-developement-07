@@ -2,30 +2,23 @@
 // {
 //     res.send("this is controller function")
 // }
+import User from "../models/auth.model.js";
 
-export const login = (req, res, next) => {
-  const { email, password } = req.body;
-
-  // Email Check
-  if (email !== "abc@gmail.com") {
-    const error = new Error("Email Not Registered");
-
-    error.statusCode = 404;
-
+export default login =(req,res,next)=>
+{
+  const{fullName , email, phone , gender , photo , password, dob} = req.body;
+  if(!fullName || !email || !phone || !gender || !photo || !password || !dob)
+  {
+    const error = new Error("All fields required");
+    error.statusCode = 400;
+    return next(error);
+  }
+  const existingUser = await User.findOne({email});
+  if(existingUser)
+  {
+    const error = new Error("Email already registered");
+    error.statusCode = 409;
     return next(error);
   }
 
-  // Password Check
-  if (password !== "123456") {
-    const error = new Error("Password Incorrect");
-
-    error.statusCode = 401;
-
-    return next(error);
-  }
-
-    // Success Response
-    res.json({
-        message: "Login Success",
-    });
-};
+}
