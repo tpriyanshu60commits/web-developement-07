@@ -13,7 +13,7 @@ app.use(express.json());
 app.use("/auth", authrouter);
 app.use("/test", testrouter);
 
-app.get("/",(req,res)=>
+app.post("/",(req,res)=>
 {
   console.log("this is start of code");
   res.json({

@@ -1,28 +1,32 @@
 import dotenv from "dotenv";
 dotenv.config();
-
-import authrouter from "./src/router/auth.route.js";
+console.log(process.env.PORT);
 
 import express from "express";
+import connectDB from "./src/config/dbConnection.config.js";
+import authrouter from "./src/router/auth.route.js";
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use("/auth", authrouter);
-app.listen(PORT, () => {
-  console.log("server started");
-});
 app.post("/", (req, res) => {
+  console.log("this is start of code");
   res.json({
-    message: "hello the code now can start",
+    message: "Welcome to my first backend Project",
   });
 });
 
 // error handling middleware
 app.use((err, req, res, next) => {
-  const errmessage = err.message || "internal server crashed";
-  const errstatusCode = err.statusCode || 500;
+  const errMessage = err.message || "internal server issue";
+  const errStatusCode = err.statusCode || 500;
 
-  res.status(errstatusCode).json({
-    message:errmessage
+  res.status(errStatusCode).json({
+    message: errMessage,
   });
+});
+
+app.listen(PORT, () => {
+  console.log("server started");
+  connectDB();
 });
