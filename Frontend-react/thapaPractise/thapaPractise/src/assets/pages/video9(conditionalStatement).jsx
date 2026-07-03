@@ -3,7 +3,7 @@ const Video9ConditionalStatement= ()=>
     // q1
     const isDark = true;
     // q2
-    let cartItems = 2;
+    let cartItems = 8;
     let cartitmesShow = "Cart Empty";
     if(cartItems>1)cartitmesShow =  "Cart not Empty";
     // q3
@@ -41,6 +41,7 @@ const Video9ConditionalStatement= ()=>
         <h1>{loading?"Loading...": "Submit"}</h1>
         <h1>{genderShow()}</h1>
         <h1>{marks>=80 ?"A" : marks >= 60 ?"B":"fail"}</h1>
+        <h1></h1>
         </>
     )
 

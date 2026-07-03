@@ -2,7 +2,7 @@ function add()
 {
     return a+b;
 }
-export function Hello()
+export const Hello=()=>
 {
     return <h1>hi how are you</h1>
 }
