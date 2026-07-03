@@ -1,20 +1,16 @@
-import Welcome,{Bye} from "./Pages/practise"
-import Counter from "./Pages/Hooks";
-import Login from "./Pages/login";
-import Class46 from "./Pages/class46";
+import { Routes, Route } from "react-router-dom";
+import Login1 from "./Pages/Login1";
+
+function Dashboard() {
+  return <h1>Dashboard</h1>;
+}
+
 function App() {
-    const city = "bhopal";
   return (
-    <div>
-    {/* <h1>welcome to react</h1>
-    <h1>city: {city}</h1> */}
-        {/* <Welcome /> */}
-        {/* <Bye/> */}
-      {/* <Counter/> */}
-      {/* <br /> */}
-      {/* <Login/> */}
-      <Class46/>
-    </div>
+    <Routes>
+      <Route path="/" element={<Login1 />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Routes>
   );
 }
 
