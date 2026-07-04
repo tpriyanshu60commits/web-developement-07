@@ -17,6 +17,7 @@ function Header() {
       <br />
       <Link to="/video12NetfilxCards">Video12NetfilxCards</Link>
       <br />
+      <Link to="/parent">ChildProps</Link>
     </>
   );
 }
