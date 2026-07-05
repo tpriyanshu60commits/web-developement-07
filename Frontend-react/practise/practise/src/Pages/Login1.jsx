@@ -19,7 +19,7 @@ function Login1()
     const name = e.target.name;
     const value = e.target.value;
 
-    setRegistrationData((prevData)=>({...prevData,[name]:value}))
+    setRegistrationData((prevData)=>({...prevData,[name]:value}));
   }
 
 
