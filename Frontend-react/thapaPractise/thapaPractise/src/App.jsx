@@ -7,8 +7,7 @@ import Video11ImportExport ,{ Hello , Footer } from "./assets/pages/Video11Impor
 import Video12LoopsMap from "./assets/pages/Video12LoopsMap";
 import Exporting,{ UptoVideo12Practise } from "./assets/pages/UptoVideo12Practise";
 import Video12NetfilxCards from "./assets/pages/Video12NetfilxCards";
-import Parent from "./otherPractise/Parent";
-import Child from "./otherPractise/Child";
+import Video13Props from "./assets/pages/Video13Props";
 const App = () => {
   return (
     <>
@@ -20,10 +19,10 @@ const App = () => {
           <Route path="/video11ImportExport" element={<><Video11ImportExport /><Hello/><Footer/></>} />
           <Route path="/video12LoopsMap" element={<Video12LoopsMap/>} />
           <Route path="/uptoVideo12Practise" element={<><UptoVideo12Practise/><Exporting/></>} />
-          <Route path="/video12NetfilxCards"element={<Video12NetfilxCards/>}/>
+          {/* <Route path="/video12NetfilxCards"element={<Video12NetfilxCards/>}/> */}
           {/* Props */}
-          <Route path="/parent" element={<Parent/>}/>
-          
+          <Route path="/Video13Props"element={<Video13Props/>}/>
+
         </Routes>
       </BrowserRouter>
     </>
