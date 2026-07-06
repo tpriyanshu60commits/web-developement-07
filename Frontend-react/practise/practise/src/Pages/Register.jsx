@@ -35,6 +35,16 @@ const Register = () => {
       email:registerData.email,
       password:registerData.password,
     }
+    // try{
+    //   const res = await api.post("/auth/register",payload);
+    //   alert(res.data.message);
+    // }
+    // catch(error)
+    // {
+    //   console.log(error.message);
+
+      
+    // }
 
   };
 
