@@ -22,7 +22,6 @@ const App = () => {
           {/* <Route path="/video12NetfilxCards"element={<Video12NetfilxCards/>}/> */}
           {/* Props */}
           <Route path="/Video13Props"element={<Video13Props/>}/>
-
         </Routes>
       </BrowserRouter>
     </>
