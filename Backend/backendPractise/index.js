@@ -8,6 +8,7 @@
   import testrouter from "./src/routers/test.route.js";
   import connectDB from "./src/config/dbConnection.config.js";
   import cloudinary from "./src/config/cloudinary.config.js";
+  import userRouter from "./src/routers/user.route.js"
   import morgan from "morgan";
   import cors from "cors";
   import cookieParser from "cookie-parser";
@@ -21,6 +22,7 @@
   app.use(cookieParser())
   app.use("/auth", authrouter);
   app.use("/test", testrouter);
+  app.use("/user", userRouter);
 
   app.post("/", (req, res) => {
     console.log("this is start of code");
@@ -52,3 +54,4 @@
       process.exit(1);
     }
   });
+  
