@@ -1,7 +1,7 @@
 import User from "../models/auth.model.js";
 import cloudinary from "../config/cloudinary.config.js";
 
-export const 1EditUserProfile = async (req, res, next) => {
+export const EditUserProfile = async (req, res, next) => {
   try {
     const { email, fullName, phone } = req.body;
     const newPhoto = req.file;

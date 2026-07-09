@@ -4,6 +4,7 @@
 // }
 import User from "../models/auth.model.js";
 import bycrpt from "bcrypt";
+import { genToken } from "../util/auth.service.js";
 export const RegisterUser = async (req, res, next) => {
   try {
     const { fullName, email, phone, gender, password, dob } = req.body;
@@ -66,6 +67,7 @@ export const loginUser = async (req, res, next) => {
     error.statusCode = 401;
     return next(error);
   }
+  await genToken(existingUser, res);
   res.status(200).json({
     message : "welcome back",
     data : existingUser,
