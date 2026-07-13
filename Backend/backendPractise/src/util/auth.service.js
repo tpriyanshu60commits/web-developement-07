@@ -11,7 +11,7 @@ export const genToken = async (user, res) => {
         maxAge:1000*60*60*24,
         httpOnly:true,
         secure:false,
-        samesite: "lax",
+        sameSite: "lax",
     })
     console.log(token);
     } catch (error) 

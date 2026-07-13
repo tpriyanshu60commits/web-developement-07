@@ -7,6 +7,7 @@ import dbConnection from "./src/config/dbConnection.config.js";
 import cloudinary from "./src/config/cloudinary.config.js";
 import morgan from "morgan";
 import cors from "cors";
+import cookieParser from "cookie-parser";
 const app = express();
 app.use(
   cors({
@@ -16,6 +17,7 @@ app.use(
 );
 app.use(morgan("dev"));
 app.use(express.json());
+app.use(cookieParser());
 
 app.post("/", (req, res) => {
   res.json({
