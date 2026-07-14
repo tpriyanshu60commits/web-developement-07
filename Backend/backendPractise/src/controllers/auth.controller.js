@@ -5,17 +5,12 @@
 import User from "../models/auth.model.js";
 import bycrpt from "bcrypt";
 import { genToken } from "../util/auth.service.js";
+import OTP from "../models/otp.model.js";
+import { SendOTPEmail } from "../util/email.service.js";
 export const RegisterUser = async (req, res, next) => {
   try {
     const { fullName, email, phone, gender, password, dob } = req.body;
-    if (
-      !fullName ||
-      !email ||
-      !phone ||
-      !gender ||
-      !password ||
-      !dob
-    ) {
+    if (!fullName || !email || !phone || !gender || !password || !dob) {
       const error = new Error("All fields required");
       error.statusCode = 400;
       return next(error);
@@ -48,34 +43,73 @@ export const RegisterUser = async (req, res, next) => {
   }
 };
 export const loginUser = async (req, res, next) => {
- try{
-   const { email, password } = req.body;
-  if (!email || !password) {
-    const error = new Error("All fields required");
-    error.statusCode = 400;
+  try {
+    const { email, password } = req.body;
+    if (!email || !password) {
+      const error = new Error("All fields required");
+      error.statusCode = 400;
+      next(error);
+    }
+    const existingUser = await User.findOne({ email });
+    if (!existingUser) {
+      const error = new Error("Email not registered");
+      error.statusCode = 404;
+      return next(error);
+    }
+    const isVerified = await bycrpt.compare(password, existingUser.password);
+    if (!isVerified) {
+      const error = new Error("password is incorrect");
+      error.statusCode = 401;
+      return next(error);
+    }
+    await genToken(existingUser, res);
+    res.status(200).json({
+      message: "welcome back",
+      data: existingUser,
+    });
+  } catch (error) {
+    console.log(error.message);
     next(error);
   }
-  const existingUser = await User.findOne({ email });
-  if (!existingUser) {
-    const error = new Error("Email not registered");
-    error.statusCode = 404;
-    return next(error);
-  }
-  const isVerified = await bycrpt.compare(password, existingUser.password);
-  if (!isVerified) {
-    const error = new Error("password is incorrect");
-    error.statusCode = 401;
-    return next(error);
-  }
-  await genToken(existingUser, res);
-  res.status(200).json({
-    message : "welcome back",
-    data : existingUser,
-  })
- }
-  catch(error)
-  {
+};
+
+export const SendOTP = async (req, res, next) => {
+  try {
+    const { email } = req.body;
+    if (!email) {
+      const error = new Error("Email is required");
+      error.statusCode = 400;
+      return next(error);
+    }
+    const existingUser = await User.findOne({ email });
+    if (!existingUser) {
+      const error = new Error("Email is not registered");
+      error.statusCode = 404;
+      return next(error);
+    }
+
+    const newOTP = (Math.floor(Math.random() * 1000000) + 100000)
+      .toString()
+      .slice(0, 6);
+
+    const existingOTP = await OTP.findOne({ email });
+    if (existingOTP) {
+      await existingOTP.deleteOne();
+    }
+
+    const hashedOTP = await bycrpt.hash(newOTP, 10);
+    const saveOTP = await OTP.create({
+      email,
+      otp: hashedOTP,
+    });
+
+    await SendOTPEmail(email,newOTP);
+
+    res.status(200).json({
+      message: `OTP sent on '${email}'`,
+    });
+  } catch (error) {
     console.log(error.message);
-    next(error)
+    next(error);    
   }
 };
