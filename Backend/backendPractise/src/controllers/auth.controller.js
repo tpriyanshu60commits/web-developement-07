@@ -7,6 +7,7 @@ import bycrpt from "bcrypt";
 import { genToken } from "../util/auth.service.js";
 import OTP from "../models/otp.model.js";
 import { SendOTPEmail } from "../util/email.service.js";
+import { GenOTPToken } from "../util/auth.service.js";
 export const RegisterUser = async (req, res, next) => {
   try {
     const { fullName, email, phone, gender, password, dob } = req.body;
@@ -83,33 +84,95 @@ export const SendOTP = async (req, res, next) => {
     }
     const existingUser = await User.findOne({ email });
     if (!existingUser) {
-      const error = new Error("Email is not registered");
+      const error = new Error("User is not Verified");
       error.statusCode = 404;
       return next(error);
     }
-
     const newOTP = (Math.floor(Math.random() * 1000000) + 100000)
       .toString()
       .slice(0, 6);
+
+    const hashedOTP = await bycrpt.hash(newOTP, 10);
 
     const existingOTP = await OTP.findOne({ email });
     if (existingOTP) {
       await existingOTP.deleteOne();
     }
 
-    const hashedOTP = await bycrpt.hash(newOTP, 10);
     const saveOTP = await OTP.create({
       email,
       otp: hashedOTP,
     });
 
-    await SendOTPEmail(email,newOTP);
+    await SendOTPEmail(email, newOTP);
 
     res.status(200).json({
       message: `OTP sent on '${email}'`,
     });
   } catch (error) {
     console.log(error.message);
-    next(error);    
+    return next(error);
   }
+};
+
+export const VerifyOTP = async (req, res) => {
+  try {
+    const { email, otp } = req.body;
+    if (!email || !otp) {
+      const error = new Error("Email and otp is required");
+      error.statusCode = 400;
+      return next(error);
+    }
+    const existingOTP = await OTP.findOne({ email });
+    if (!existingOTP) {
+      const error = new Error("OTP Expired");
+      error.statusCode = 404;
+      return next(error);
+    }
+    const isVerified = await bycrpt.compare(otp, existingOTP.otp);
+    if (!isVerified) {
+      const error = new Error("OTP Expired");
+      const statusCode = 401;
+      return next(error);
+    }
+
+    await existingOTP.deleteOne();
+
+    const existingUser = await User.findOne({ email });
+    if (!existingUser) {
+      const error = new Error("User is not Verified");
+      error.statusCode = 404;
+      return next(error);
+    }
+
+    await GenOTPToken(existingUser, res);
+
+    res.status(200).json({
+      message: "OTP verified. Create You New Password Now",
+    });
+  } catch (error) {
+    console.log(error.message);
+    return next(error);
+  }
+};
+
+export const ResetPassword = async (req, res, next) => {
+  try {
+    const { newPassword } = req.body;
+
+    const currentUser = req.user;
+
+    const hashedPassword = await bycrpt.hash(newPassword, 10);
+
+    currentUser.password = hashedPassword;
+
+    await currentUser.save();
+
+    res.status(200).json({
+      message: "Password changed successfully",
+    });
+  } catch (error) {
+console.log(error.message);
+  console.log(error.stack);
+  return next(error);  }
 };
