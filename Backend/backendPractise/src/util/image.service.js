@@ -1,4 +1,3 @@
-import { promises } from "nodemailer/lib/xoauth2";
 import cloudinary from "../config/cloudinary.config.js";
 
 export const uploadMultipleImages = async (Images, storageLocation) => {
