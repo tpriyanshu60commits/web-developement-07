@@ -73,6 +73,17 @@ export const loginUser = async (req, res, next) => {
     next(error);
   }
 };
+export const logOutUser = async (req, res, next) => {
+  try {
+    res.clearCookie("oreo", { maxAge: 0 });
+    res.status(200).json({
+      message: "logout Successfull",
+    });
+  } catch (error) {
+    console.log(error.message);
+    next(error);
+  }
+};
 
 export const SendOTP = async (req, res, next) => {
   try {
@@ -159,6 +170,11 @@ export const VerifyOTP = async (req, res) => {
 export const ResetPassword = async (req, res, next) => {
   try {
     const { newPassword } = req.body;
+    if (!newPassword) {
+      const error = new Error("New password is required");
+      error.statusCode = 400;
+      return next(error);
+    }
 
     const currentUser = req.user;
 
@@ -172,7 +188,8 @@ export const ResetPassword = async (req, res, next) => {
       message: "Password changed successfully",
     });
   } catch (error) {
-console.log(error.message);
-  console.log(error.stack);
-  return next(error);  }
+    console.log(error.message);
+    console.log(error.stack);
+    return next(error);
+  }
 };

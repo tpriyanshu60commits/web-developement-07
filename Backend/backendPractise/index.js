@@ -9,6 +9,7 @@
   import connectDB from "./src/config/dbConnection.config.js";
   import cloudinary from "./src/config/cloudinary.config.js";
   import userRouter from "./src/routers/user.route.js"
+  import restauratRouter from "./src/routers/restaurant.route.js";
   import morgan from "morgan";
   import cors from "cors";
   import cookieParser from "cookie-parser";
@@ -23,8 +24,9 @@
   app.use("/auth", authrouter);
   app.use("/test", testrouter);
   app.use("/user", userRouter);
+  app.use("/restaurant", restauratRouter);
 
-  app.post("/", (req, res) => {
+  app.get("/", (req, res) => {
     console.log("this is start of code");
     res.json({
       message: "Welcome to my first backend Project",
@@ -40,7 +42,7 @@
       message: ErrMessage,
     });
   });
-  const PORT = process.env.port || 3000;
+  const PORT = process.env.PORT || 3000;
 
   app.listen(PORT, async () => {
     console.log("server started");

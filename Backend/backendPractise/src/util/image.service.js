@@ -16,10 +16,10 @@ export const uploadMultipleImages = async (Images, storageLocation) => {
       console.log(result);
       return {
         url: result.secure_url,
-        public_id: result.public_id,
+        publicId: result.public_id,
       };
     });
-    return await promise.all(multiple);
+    return await Promise.all(multiple);
   } catch (error) {
     console.log(error.message);
     throw error;
@@ -38,7 +38,7 @@ export const deleteMultipleImages = async (Images) => {
   }
 };
 
-export const deleteSingle = async (Image, storageLocation) => {
+export const deleteSingleImage = async (Image) => {
   try {
     await cloudinary.uploader.destroy(Image.publicId);
   } catch (error) {
@@ -47,7 +47,7 @@ export const deleteSingle = async (Image, storageLocation) => {
   }
 };
 
-export const singleImage = async (Image, storageLocation) => {
+export const UploadSingleImage = async (Image, storageLocation) => {
   try {
     const b64 = Buffer.from(Image.buffer).toString("base64");
     const dataURI = `data:${Image.mimetype};base64,${b64}`;

@@ -7,14 +7,34 @@ export const genToken = async (user, res) => {
       expiresIn: "1d",
     });
 
-    res.cookie("Oreos", token, {
+    res.cookie("oreo", token, {
       maxAge: 1000 * 60 * 60 * 24,
+      httpOnly: true,
+      secure: false,
+      sameSite: "lax",
+    });
+
+    console.log(token);
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const genOtpToken = async (user, res) => {
+  try {
+    const payload = { id: user._id };
+    const token = await jwt.sign(payload, process.env.JWT_SECRET, {
+      expiresIn: "10m",
+    });
+    res.cookie("kitkat", token, {
+      maxAge: 1000 * 60 * 10,
       httpOnly: true,
       secure: false,
       sameSite: "lax",
     });
     console.log(token);
   } catch (error) {
+    console.log(error.message);
     throw error;
   }
 };
