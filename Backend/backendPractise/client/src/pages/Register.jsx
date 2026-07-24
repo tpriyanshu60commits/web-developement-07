@@ -1,139 +1,242 @@
-import React from "react";
+import React, { useState } from "react";
 import api from "../config/ApiConfig";
 import toast from "react-hot-toast";
-import { useState } from "react";
 
 const Register = () => {
   const [formData, setFormData] = useState({
+    userType: "",
     fullName: "",
     email: "",
     phone: "",
     gender: "",
-    dob: "",
     password: "",
     confirmPassword: "",
+    dob: "",
+    agreeTerms: "",
   });
-  const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
 
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, type, value, checked } = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]: type === "checkbox" ? checked : value,
     }));
   };
+  const handleUserTypeChange = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      userType: e.target.value,
+    }));
+  };
+
+  const validateData = (data) => {
+    const newErrors = {};
+
+    if (!data.fullName.trim()) newErrors.fullName = "Fullname is required";
+    if (!data.email.trim()) newErrors.email = "email is required";
+    if (!data.phone.trim()) newErrors.phone = "phone is required";
+    if (!data.gender) newErrors.gender = "gender is required";
+    if (!data.dob) newErrors.dob = "dob is required";
+    if (!data.password.trim() || data.password.length < 6)
+      newErrors.password = "Password must be at least 6 characters";
+    if (!data.confirmPassword.trim())
+      newErrors.confirmPassword = "confirmPassword is required";
+    if (data.password !== data.confirmPassword)
+      newErrors.confirmPassword = "Passwords do not match";
+    // if (!data.agreeTerms)
+    //   newErrors.agreeTerms = "You must agree to terms and conditions";
+
+    return newErrors;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+      console.log("Submit clicked");
+
+    setLoading(true);
+    const validateErrors = validateData(formData);
+    if (Object.keys(validateErrors).length > 0) {
+      setErrors(validateErrors);
+      setLoading(false);
+      return;
+    }
+
     const payload = {
       ...formData,
       email: formData.email.toLowerCase(),
     };
-    console.log("Frontend Payload:", payload);
+    console.log(payload);
+
     try {
       const res = await api.post("/auth/register", payload);
-      toast.success(res.data.message);
+      console.log(res.data);
+      toast.success(res.data?.message);
     } catch (error) {
-        toast.error(
-            error.response?.data?.message,
-        )
+      toast.error(
+        error.response?.data?.message ||
+          "Unknown error occurred during registration. Please try again.",
+      );
+    } finally {
+      setLoading(false);
     }
   };
+
   return (
     <>
-      <div className="bg-amber-200 h-screen flex items-center justify-center">
-        <div className=" border p-5  rounded-xl">
-          <h2 className="text-center opacity-80">Create Account</h2>
-          <p className="opacity-50">
+      <div className="h-[90vh] bg-[url('/foodTable.webp')] flex items-center justify-end bg-cover bg-center p-10 md:pe-30">
+        <div className="bg-white rounded-lg shadow-md px-10 py-6 max-w-md w-full overflow-y-auto max-h-[85vh]">
+          <h1 className="text-3xl font-bold text-(--color-primary) mb-2 text-center">
+            Create Account
+          </h1>
+          <p className="text-(--color-secondary) text-center mb-4">
             Join us as a Customer, Restaurant, or Rider
           </p>
 
+          {/* User Type Selection */}
+          <div>
+            <label className="block text-(--color-neutral) font-semibold mb-3">
+              Register as:
+            </label>
+            <div className="flex gap-5">
+              {["customer", "restaurant", "rider"].map((type) => (
+                <label key={type}>
+                  <input
+                    type="radio"
+                    name="userType"
+                    value={type}
+                    checked={formData.userType === type}
+                    onChange={handleUserTypeChange}
+                    className="cursor-pointer"
+                  />
+                  <span>{type}</span>
+                </label>
+              ))}
+            </div>
+          </div>
           {/* fullname */}
           <form onSubmit={handleSubmit}>
-            <div className="mt-5 mb-3">
+            <div className="mb-4">
               <input
                 type="text"
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleInputChange}
-                placeholder="Enter your fullName"
-                className="w-full border p-2 rounded-sm"
+                placeholder="Enter your full name"
+                className="w-full px-3 py-2 border rounded-md text-sm text-(--color-neutral) placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-(--color-primary)"
               />
+              {errors.fullName && (
+                <span className="text-(--color-error) text-xs mt-1 block">
+                  {errors.fullName}
+                </span>
+              )}
             </div>
             {/* email */}
-            <div className="mt-5 mb-3">
+            <div className="mb-4">
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
                 placeholder="Enter your email"
-                className="w-full border p-2 rounded-sm"
+                className="w-full px-3 py-2 border rounded-md text-sm text-(--color-neutral) placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-(--color-primary)"
               />
+              {errors.email && (
+                <span className="text-(--color-error) text-xs mt-1 block">
+                  {errors.email}
+                </span>
+              )}
             </div>
-            {/* phone */}
-            <div className="mt-5 mb-3">
+            {/* Phone */}
+            <div className="mb-4">
               <input
-                type="number"
+                type="tel"
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                placeholder="Enter your phone"
-                className="w-full border p-2 rounded-sm"
+                placeholder="Enter your phone "
+                className="w-full px-3 py-2 border rounded-md text-sm text-(--color-neutral) placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-(--color-primary)"
               />
+              {errors.phone && (
+                <span className="text-(--color-error) text-xs mt-1 block">
+                  {errors.phone}
+                </span>
+              )}
             </div>
-
-            {/* dob */}
-            <div className="mt-5 mb-3">
-              <input
-                type="date"
-                name="dob"
-                value={formData.dob}
-                onChange={handleInputChange}
-                placeholder="Enter your dob"
-                className="w-full border p-2 rounded-sm"
-              />
-            </div>
-            {/* gender */}
-            <div className="mt-5 mb-3">
-              <select
-                name="gender"
-                value={formData.gender}
-                onChange={handleInputChange}
-                className="w-full border p-2 rounded-sm"
-              >
-                <option value="">Select gender</option>
-                <option value="male">male</option>
-                <option value="female">female</option>
-                <option value="other">other</option>
-              </select>
-            </div>
-            {/* password */}
-            <div className="mt-5 mb-3">
+            {/* Password */}
+            <div className="mb-4">
               <input
                 type="password"
                 name="password"
                 value={formData.password}
                 onChange={handleInputChange}
-                placeholder="Enter your password"
-                className="w-full border p-2 rounded-sm"
+                placeholder="Enter your Password"
+                className="w-full px-3 py-2 border rounded-md text-sm text-(--color-neutral) placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-(--color-primary)"
               />
+              {errors.password && (
+                <span className="text-(--color-error) text-xs mt-1 block">
+                  {errors.password}
+                </span>
+              )}
             </div>
-            {/*confirm password */}
-            <div className="mt-5 mb-3">
+            {/* Confirm password */}
+            <div className="mb-4">
               <input
                 type="password"
                 name="confirmPassword"
                 value={formData.confirmPassword}
                 onChange={handleInputChange}
-                placeholder="Enter your confirm password"
-                className="w-full border p-2 rounded-sm"
+                placeholder="Enter your Confirm password "
+                className="w-full px-3 py-2 border rounded-md text-sm text-(--color-neutral) placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-(--color-primary)"
               />
+              {errors.confirmPassword && (
+                <span className="text-(--color-error) text-xs mt-1 block">
+                  {errors.confirmPassword}
+                </span>
+              )}
+            </div>
+            {/* gender */}
+            <div className="mb-4">
+              <select
+                name="gender"
+                value={formData.gender}
+                onChange={handleInputChange}
+                className="w-full px-3 py-2 border rounded-md text-sm text-(--color-neutral) placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-(--color-primary)"
+              >
+                <option value="">Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>{" "}
+              </select>
+              {errors.gender && (
+                <span className="text-(--color-error) text-xs mt-1 block">
+                  {errors.gender}
+                </span>
+              )}
+            </div>
+            {/* dob */}
+            <div className="mb-4">
+              <input
+                type="date"
+                name="dob"
+                value={formData.dob}
+                onChange={handleInputChange}
+                placeholder="Enter your dob "
+                className="w-full px-3 py-2 border rounded-md text-sm text-(--color-neutral) placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-(--color-primary)"
+              />
+              {errors.dob && (
+                <span className="text-(--color-error) text-xs mt-1 block">
+                  {errors.dob}
+                </span>
+              )}
             </div>
             <button
               type="submit"
-              className="w-full bg-red-400 p-3 border-transparent rounded-2xl "
+              className="w-full py-3 bg-orange-700 text-black font-semibold rounded-md"
             >
-              {" "}
-              Register
+              {loading ? "Registering..." : "Register"}
             </button>
           </form>
         </div>
