@@ -3,7 +3,6 @@ import Register from "./pages/Register";
 import { Route , Routes } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import Login from "./pages/Login";
-
 function App() {
   return (
     <>

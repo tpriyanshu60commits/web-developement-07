@@ -140,7 +140,7 @@ export const SendOTP = async (req, res, next) => {
   }
 };
 
-export const VerifyOTP = async (req, res) => {
+export const VerifyOTP = async (req, res,next) => {
   try {
     const { email, otp } = req.body;
     if (!email || !otp) {
