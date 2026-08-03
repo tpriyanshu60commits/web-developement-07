@@ -60,7 +60,7 @@ const Register = () => {
 
       return;
     }
-    console.log("Form submitted:", formData);
+    console.log("formData : ", formData);
     const payload = {
       ...formData,
       email: formData.email.toLowerCase(),

@@ -10,8 +10,18 @@ import { SendOTPEmail } from "../util/email.service.js";
 import { GenOTPToken } from "../util/auth.service.js";
 export const RegisterUser = async (req, res, next) => {
   try {
-    const { fullName, email, phone, gender, password, dob } = req.body;
-    if (!fullName || !email || !phone || !gender || !password || !dob) {
+    const { fullName, email, phone, gender, password, dob, userType } =
+      req.body;
+    console.log(req.body);
+    if (
+      !fullName ||
+      !email ||
+      !phone ||
+      !gender ||
+      !password ||
+      !dob ||
+      !userType
+    ) {
       const error = new Error("All fields required");
       error.statusCode = 400;
       return next(error);
@@ -36,8 +46,11 @@ export const RegisterUser = async (req, res, next) => {
       password: hashedPassword,
       dob,
       photo,
+      userType,
     });
-    res.status(201).json({ message: "user created successfully" });
+    res
+      .status(201)
+      .json({ message: "user created successfully", data: newUser });
   } catch (error) {
     console.log(error.message);
     next(error);
@@ -46,6 +59,7 @@ export const RegisterUser = async (req, res, next) => {
 export const loginUser = async (req, res, next) => {
   try {
     const { email, password } = req.body;
+
     if (!email || !password) {
       const error = new Error("All fields required");
       error.statusCode = 400;

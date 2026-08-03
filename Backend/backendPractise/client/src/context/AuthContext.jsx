@@ -4,7 +4,7 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(
     JSON.parse(sessionStorage.getItem("cravingUser")) || null,
-  );
+  );  
   const [isLogin, setIsLogin] = useState(!!user);
   const [role, setRole] = useState(user ? user.userType : null);
   useEffect(() => {
